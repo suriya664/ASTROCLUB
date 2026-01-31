@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observation of M31 - Astronomy Club</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        slate: { 850: '#151e2e', 900: '#0f172a', 950: '#020617' }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                        mono: ['Orbitron', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-slate-900 text-white min-h-screen flex flex-col">
+
+    <div id="header-placeholder"></div>
+
+    <main class="flex-grow pt-[80px]">
+
+        <!-- Breadcrumb -->
+        <div class="bg-slate-950 py-4 border-b border-slate-800">
+            <div class="container mx-auto px-4 text-sm text-slate-400">
+                <a href="index.html" class="hover:text-white">Home</a> <i class="fas fa-chevron-right text-xs mx-2"></i>
+                <a href="observations.html" class="hover:text-white">Observations</a> <i
+                    class="fas fa-chevron-right text-xs mx-2"></i>
+                <span class="text-white">Andromeda Galaxy (M31)</span>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- Main Content -->
+                <div class="lg:col-span-2 space-y-8">
+
+                    <!-- Image Viewer -->
+                    <div class="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&q=80"
+                            alt="M31" class="w-full h-auto">
+                        <div class="p-4 bg-slate-900 flex justify-between items-center text-sm text-slate-400">
+                            <div>
+                                <i class="fas fa-camera mr-1"></i> Canon 6D
+                                <span class="mx-2">•</span>
+                                <i class="fas fa-clock mr-1"></i> 2 min exposure
+                            </div>
+                            <button class="hover:text-white"><i class="fas fa-expand"></i> Fullscreen</button>
+                        </div>
+                    </div>
+
+                    <!-- Details -->
+                    <div class="bg-slate-800 border border-slate-700 rounded-xl p-6">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h1 class="text-3xl font-display font-bold mb-1">Andromeda Galaxy (M31)</h1>
+                                <p class="text-slate-400">Observed on Aug 01, 2024 at 11:30 PM</p>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-2xl font-bold text-yellow-400">★★★★☆</div>
+                                <div class="text-xs text-slate-400">Seeing Conditions</div>
+                            </div>
+                        </div>
+
+                        <div class="prose prose-invert max-w-none text-slate-300 mb-8">
+                            <p>Usually M31 is just a smudge in my backyard, but tonight at the Dark Sky Park it was
+                                spectacular. I could clearly trace the main dust lanes extending from the core. M32 and
+                                M110 were also easily visible in the same field of view with the 25mm eyepiece.</p>
+                            <p>Used averted vision to see the full extent of the spiral arms. It filled almost the
+                                entire field of view.</p>
+                        </div>
+
+                        <!-- Technical Data -->
+                        <div
+                            class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-slate-900/50 p-4 rounded-lg border border-slate-800">
+                            <div>
+                                <span class="block text-xs uppercase text-slate-500 font-bold">Equipment</span>
+                                <span class="text-sm font-bold">8" Dobsonian</span>
+                            </div>
+                            <div>
+                                <span class="block text-xs uppercase text-slate-500 font-bold">Magnification</span>
+                                <span class="text-sm font-bold">48x</span>
+                            </div>
+                            <div>
+                                <span class="block text-xs uppercase text-slate-500 font-bold">Sky Quality</span>
+                                <span class="text-sm font-bold">Bortle 3</span>
+                            </div>
+                            <div>
+                                <span class="block text-xs uppercase text-slate-500 font-bold">Coordinates</span>
+                                <span class="text-sm font-bold">RA 00h 42m</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comments -->
+                    <div class="bg-slate-800 border border-slate-700 rounded-xl p-6">
+                        <h3 class="font-bold text-lg mb-6">Discussion (2)</h3>
+                        <div class="space-y-6">
+                            <!-- Comment 1 -->
+                            <div class="flex gap-4">
+                                <div class="w-10 h-10 rounded-full bg-slate-700 flex-shrink-0"></div>
+                                <div>
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <span class="font-bold text-sm">Mike K.</span>
+                                        <span class="text-slate-500 text-xs">2 hours ago</span>
+                                    </div>
+                                    <p class="text-slate-300 text-sm">Great sketch! I was observing the same target last
+                                        night but didn't get this level of detail.</p>
+                                </div>
+                            </div>
+                            <!-- Comment 2 -->
+                            <div class="flex gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-purple-600 flex-shrink-0 flex items-center justify-center font-bold text-xs">
+                                    JD</div>
+                                <div>
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <span class="font-bold text-sm">John Doe</span>
+                                        <span class="text-slate-500 text-xs">1 hour ago</span>
+                                    </div>
+                                    <p class="text-slate-300 text-sm">Thanks Mike! The darkness really helped pop those
+                                        dust lanes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="space-y-6">
+                    <!-- Observer Card -->
+                    <div class="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center">
+                        <div
+                            class="w-24 h-24 rounded-full bg-slate-700 mx-auto mb-4 border-4 border-slate-900 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80"
+                                alt="JD" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-bold text-lg">John Doe</h3>
+                        <p class="text-slate-400 text-sm mb-4">Member since 2020</p>
+                        <button class="btn-outline w-full py-2 rounded-lg text-sm mb-2">View Profile</button>
+                    </div>
+
+                    <!-- Object Info -->
+                    <div class="bg-slate-800 border border-slate-700 rounded-xl p-6">
+                        <h3 class="font-bold mb-4 border-b border-slate-700 pb-2">Object Info</h3>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/M31_Lanoue.png/320px-M31_Lanoue.png"
+                            alt="Map" class="w-full rounded mb-4 opacity-50 grayscale hover:grayscale-0 transition-all">
+                        <ul class="space-y-2 text-sm text-slate-300">
+                            <li class="flex justify-between"><span>Constellation:</span> <span
+                                    class="font-bold">Andromeda</span></li>
+                            <li class="flex justify-between"><span>Type:</span> <span class="font-bold">Spiral
+                                    Galaxy</span></li>
+                            <li class="flex justify-between"><span>Magnitude:</span> <span class="font-bold">3.4</span>
+                            </li>
+                            <li class="flex justify-between"><span>Distance:</span> <span class="font-bold">2.5M
+                                    ly</span></li>
+                        </ul>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Astronomy Club</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        slate: { 850: '#151e2e', 900: '#0f172a', 950: '#020617' }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                        mono: ['Orbitron', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-slate-900 text-white h-screen overflow-hidden flex page-login">
+
+    <!-- Left Side (Image/Branding) - Hidden on Mobile -->
+    <div class="hidden lg:flex w-1/2 relative flex-col justify-center items-center bg-slate-950 overflow-hidden">
+        <div
+            class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-40">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-slate-900/40"></div>
+
+        <div class="relative z-10 text-center p-12">
+            <h2 class="text-4xl font-display font-bold mb-6 text-white">Welcome Back, Stargazer</h2>
+            <p class="text-xl text-slate-300 max-w-md mx-auto leading-relaxed">
+                "The cosmos is within us. We are made of star-stuff. We are a way for the universe to know itself."
+            </p>
+            <div class="mt-8 flex justify-center gap-2 text-purple-400">
+                <i class="fas fa-star text-xs animate-pulse"></i>
+                <i class="fas fa-star text-sm animate-pulse delay-100"></i>
+                <i class="fas fa-star text-xs animate-pulse delay-200"></i>
+            </div>
+        </div>
+
+        <!-- Animated Canvas Background for Left Side -->
+        <canvas id="login-starfield" class="absolute inset-0 pointer-events-none"></canvas>
+    </div>
+
+    <!-- Right Side (Login Form) -->
+    <div class="w-full lg:w-1/2 flex items-center justify-center p-6 relative bg-slate-900">
+        <!-- Close Button (Mobile) -->
+        <a href="index.html" class="absolute top-6 right-6 text-slate-500 hover:text-white transition-colors">
+            <i class="fas fa-times text-2xl"></i>
+        </a>
+
+        <div class="w-full max-w-md">
+            <!-- Logo area centered -->
+            <div class="text-center mb-8">
+                <a href="index.html" class="inline-flex items-center gap-3 group">
+                    <i class="fas fa-meteor text-4xl text-purple-500 group-hover:rotate-12 transition-transform"></i>
+                    <span class="text-3xl font-orbitron font-bold text-white tracking-wider">ASTRO<span
+                            class="text-purple-500">CLUB</span></span>
+                </a>
+            </div>
+
+            <div
+                class="bg-slate-800/50 backdrop-blur-lg border border-slate-700/50 rounded-2xl p-8 shadow-2xl relative overflow-hidden">
+                <div
+                    class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500">
+                </div>
+
+                <h3 class="text-2xl font-bold mb-1 text-center">Member Login</h3>
+                <p class="text-slate-400 text-sm mb-8 text-center">Enter your coordinates to access the portal</p>
+
+                <form>
+                    <div class="space-y-5">
+                        <div class="relative group">
+                            <i
+                                class="fas fa-user absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 group-focus-within:text-purple-500 transition-colors"></i>
+                            <input type="email" placeholder="Email or Username"
+                                class="w-full bg-slate-900/80 border border-slate-700 text-white rounded-lg py-3 pl-12 pr-4 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all placeholder:text-slate-600">
+                        </div>
+
+                        <div class="relative group">
+                            <i
+                                class="fas fa-lock absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 group-focus-within:text-purple-500 transition-colors"></i>
+                            <input type="password" placeholder="Password"
+                                class="w-full bg-slate-900/80 border border-slate-700 text-white rounded-lg py-3 pl-12 pr-4 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all placeholder:text-slate-600">
+                            <button type="button"
+                                class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 hover:text-white">
+                                <i class="far fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between mt-6 text-sm">
+                        <label class="flex items-center gap-2 cursor-pointer group">
+                            <input type="checkbox"
+                                class="rounded bg-slate-900 border-slate-700 text-purple-600 focus:ring-offset-slate-900 focus:ring-purple-500">
+                            <span class="text-slate-400 group-hover:text-slate-300">Remember me</span>
+                        </label>
+                        <a href="#" class="text-purple-400 hover:text-purple-300 transition-colors">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full btn-primary mt-8 py-3 rounded-lg text-lg shadow-lg shadow-purple-900/30">
+                        Sign In Now <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </button>
+                </form>
+
+                <div class="my-8 flex items-center gap-4">
+                    <div class="h-px bg-slate-700 flex-1"></div>
+                    <span class="text-slate-500 text-xs uppercase tracking-wider">Or continue with</span>
+                    <div class="h-px bg-slate-700 flex-1"></div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <button
+                        class="bg-slate-900 border border-slate-700 hover:bg-slate-800 text-white py-2 rounded-lg flex items-center justify-center gap-2 transition-all">
+                        <i class="fab fa-google text-red-500"></i> Google
+                    </button>
+                    <button
+                        class="bg-slate-900 border border-slate-700 hover:bg-slate-800 text-white py-2 rounded-lg flex items-center justify-center gap-2 transition-all">
+                        <i class="fab fa-facebook text-blue-500"></i> Facebook
+                    </button>
+                </div>
+
+                <div class="mt-8 text-center text-sm text-slate-400">
+                    Not a member yet? <a href="register.html"
+                        class="text-purple-400 hover:text-purple-300 font-semibold transition-colors">Join the Club</a>
+                </div>
+            </div>
+
+            <!-- Footer links inside card area as requested for "focus" (or just below) -->
+            <div class="mt-8 text-center text-xs text-slate-600 space-x-4">
+                <a href="#" class="hover:text-slate-400">Privacy Policy</a>
+                <span>&bull;</span>
+                <a href="#" class="hover:text-slate-400">Terms of Service</a>
+                <span>&bull;</span>
+                <a href="#" class="hover:text-slate-400">Help Center</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script for Starfield on Left Side -->
+    <script>
+        const canvas = document.getElementById('login-starfield');
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+            let stars = [];
+
+            function resize() {
+                canvas.width = canvas.parentElement.offsetWidth;
+                canvas.height = canvas.parentElement.offsetHeight;
+                init();
+            }
+
+            function init() {
+                stars = [];
+                const count = 100;
+                for (let i = 0; i < count; i++) {
+                    stars.push({
+                        x: Math.random() * canvas.width,
+                        y: Math.random() * canvas.height,
+                        s: Math.random() * 1.5,
+                        o: Math.random()
+                    });
+                }
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = '#fff';
+                stars.forEach(st => {
+                    ctx.globalAlpha = st.o;
+                    ctx.beginPath();
+                    ctx.arc(st.x, st.y, st.s, 0, Math.PI * 2);
+                    ctx.fill();
+                    st.o += (Math.random() - 0.5) * 0.03;
+                    if (st.o < 0) st.o = 0; if (st.o > 1) st.o = 1;
+                });
+                requestAnimationFrame(draw);
+            }
+
+            window.addEventListener('resize', resize);
+            resize();
+            draw();
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astronomy Club - Calendar View</title>
+    <link rel="icon" href="https://fav.farm/🪐" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        slate: { 850: '#151e2e', 900: '#0f172a', 950: '#020617' }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                        mono: ['Orbitron', 'monospace'],
+                    },
+                    height: {
+                        'hero': 'calc(100vh - 80px)'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-slate-900 text-white min-h-screen flex flex-col">
+
+    <!-- Header Injection -->
+    <div id="header-placeholder"></div>
+
+    <main class="flex-grow pt-[80px]">
+
+        <!-- Hero Split (Text + Mini Cal) -->
+        <section class="relative">
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0">
+                <img src="assets/images/hero-nebula.png" alt="Cosmic Background"
+                    class="w-full h-full object-cover opacity-40">
+                <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+            </div>
+
+            <div class="container mx-auto px-4 py-8 lg:py-12 relative z-10">
+                <div class="flex flex-col lg:flex-row gap-8 items-stretch h-full">
+
+                    <!-- Left: Intro & Tonight -->
+                    <div class="lg:w-1/2 flex flex-col justify-center space-y-6">
+                        <span class="text-purple-400 font-bold uppercase tracking-widest text-sm">Welcome to the
+                            Club</span>
+                        <h1 class="text-4xl md:text-6xl font-display font-bold leading-tight">
+                            Your Gateway to the <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">Universe</span>.
+                        </h1>
+                        <p class="text-slate-400 text-lg max-w-lg">
+                            Track celestial events, join observation nights, and connect with a community of stargazers.
+                        </p>
+
+                        <div
+                            class="bg-slate-800/80 border border-slate-700 p-6 rounded-2xl flex items-center justify-between shadow-lg">
+                            <div>
+                                <div class="text-xs text-slate-500 uppercase font-bold mb-1">Tonight's Moon</div>
+                                <div class="font-display font-bold text-2xl">Waxing Crescent</div>
+                                <div class="text-sm text-purple-400 mt-1">Illumination: 24%</div>
+                            </div>
+                            <div class="text-4xl text-yellow-100 opacity-80">
+                                <i class="fas fa-moon"></i>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 pt-4">
+                            <a href="register.html" class="btn-primary py-3 px-8 rounded-lg shadow-lg font-bold">Join
+                                Today</a>
+                            <a href="events.html"
+                                class="btn-outline border-slate-700 text-white hover:bg-slate-800 px-8 py-3 rounded-lg font-bold">View
+                                Full Calendar</a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Week Calendar Widget -->
+                    <div
+                        class="lg:w-1/2 bg-slate-800 border border-slate-700 rounded-3xl p-6 shadow-2xl relative overflow-hidden flex flex-col">
+                        <div
+                            class="absolute top-0 right-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none">
+                        </div>
+
+                        <div class="flex items-center justify-between mb-6 z-10">
+                            <h2 class="text-2xl font-bold font-display">This Week</h2>
+                            <span class="text-slate-400 text-sm">Aug 12 - Aug 18</span>
+                        </div>
+
+                        <div class="flex-grow space-y-3 z-10 overflow-y-auto">
+                            <!-- Event Item -->
+                            <div
+                                class="bg-slate-900/80 p-4 rounded-xl border border-slate-700/50 hover:border-purple-500 transition-colors flex gap-4 items-center group cursor-pointer">
+                                <div
+                                    class="w-14 h-14 bg-purple-900/30 rounded-lg flex flex-col items-center justify-center text-purple-400 font-bold border border-purple-500/20 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                                    <span class="text-xs uppercase">Mon</span>
+                                    <span class="text-xl">12</span>
+                                </div>
+                                <div class="flex-grow">
+                                    <h3 class="font-bold text-lg group-hover:text-purple-400 transition-colors">Perseid
+                                        Meteor Shower</h3>
+                                    <div class="flex items-center gap-4 text-xs text-slate-400 mt-1">
+                                        <span><i class="far fa-clock"></i> 10:00 PM</span>
+                                        <span><i class="fas fa-map-marker-alt"></i> Dark Sky Park</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 group-hover:text-white group-hover:bg-purple-600 transition-all">
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+
+                            <!-- Event Item -->
+                            <div
+                                class="bg-slate-900/80 p-4 rounded-xl border border-slate-700/50 hover:border-blue-500 transition-colors flex gap-4 items-center group cursor-pointer">
+                                <div
+                                    class="w-14 h-14 bg-blue-900/30 rounded-lg flex flex-col items-center justify-center text-blue-400 font-bold border border-blue-500/20 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                                    <span class="text-xs uppercase">Thu</span>
+                                    <span class="text-xl">15</span>
+                                </div>
+                                <div class="flex-grow">
+                                    <h3 class="font-bold text-lg group-hover:text-blue-400 transition-colors">Intro to
+                                        Telescopes</h3>
+                                    <div class="flex items-center gap-4 text-xs text-slate-400 mt-1">
+                                        <span><i class="far fa-clock"></i> 7:00 PM</span>
+                                        <span><i class="fas fa-home"></i> Community Center</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 group-hover:text-white group-hover:bg-blue-600 transition-all">
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+
+                            <!-- Event Item -->
+                            <div
+                                class="bg-slate-900/80 p-4 rounded-xl border border-slate-700/50 hover:border-green-500 transition-colors flex gap-4 items-center group cursor-pointer">
+                                <div
+                                    class="w-14 h-14 bg-green-900/30 rounded-lg flex flex-col items-center justify-center text-green-400 font-bold border border-green-500/20 group-hover:bg-green-600 group-hover:text-white transition-colors">
+                                    <span class="text-xs uppercase">Sat</span>
+                                    <span class="text-xl">17</span>
+                                </div>
+                                <div class="flex-grow">
+                                    <h3 class="font-bold text-lg group-hover:text-green-400 transition-colors">Planetary
+                                        Viewing</h3>
+                                    <div class="flex items-center gap-4 text-xs text-slate-400 mt-1">
+                                        <span><i class="far fa-clock"></i> 8:30 PM</span>
+                                        <span><i class="fas fa-map-marker-alt"></i> Observatory</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 group-hover:text-white group-hover:bg-green-600 transition-all">
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sky Map Promo (Grid) -->
+        <section class="bg-slate-950 py-16">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-display font-bold mb-10">Explore the Night Sky</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div
+                        class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col items-center hover:-translate-y-2 transition-transform cursor-pointer">
+                        <i class="fas fa-globe-americas text-4xl text-blue-500 mb-4 opacity-80"></i>
+                        <h3 class="font-bold">Interactive Map</h3>
+                    </div>
+                    <div
+                        class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col items-center hover:-translate-y-2 transition-transform cursor-pointer">
+                        <i class="fas fa-satellite text-4xl text-purple-500 mb-4 opacity-80"></i>
+                        <h3 class="font-bold">ISS Tracker</h3>
+                    </div>
+                    <div
+                        class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col items-center hover:-translate-y-2 transition-transform cursor-pointer">
+                        <i class="fas fa-meteor text-4xl text-orange-500 mb-4 opacity-80"></i>
+                        <h3 class="font-bold">Meteor Shower Guide</h3>
+                    </div>
+                    <div
+                        class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col items-center hover:-translate-y-2 transition-transform cursor-pointer">
+                        <i class="fas fa-camera-retro text-4xl text-green-500 mb-4 opacity-80"></i>
+                        <h3 class="font-bold">Photo Planning</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Highlights -->
+        <section class="bg-slate-900 py-16 border-t border-slate-800">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-display font-bold mb-10">Captured by Members</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                    <!-- Image 1 -->
+                    <div class="rounded-xl overflow-hidden shadow-xl border border-slate-700 group relative">
+                        <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&q=80"
+                            alt="Milky Way"
+                            class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div class="text-left">
+                                <h3 class="font-bold text-white">Milky Way Core</h3>
+                                <p class="text-xs text-slate-300">By Alex Space</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Image 2 -->
+                    <div class="rounded-xl overflow-hidden shadow-xl border border-slate-700 group relative">
+                        <img src="https://images.unsplash.com/photo-1543722530-d2c3201371e7?auto=format&fit=crop&q=80"
+                            alt="Deep Field"
+                            class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div class="text-left">
+                                <h3 class="font-bold text-white">Deep Field</h3>
+                                <p class="text-xs text-slate-300">By Sarah Star</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Image 3 -->
+                    <div class="rounded-xl overflow-hidden shadow-xl border border-slate-700 group relative">
+                        <img src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&q=80"
+                            alt="Moon"
+                            class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div class="text-left">
+                                <h3 class="font-bold text-white">Lunar Detail</h3>
+                                <p class="text-xs text-slate-300">By John Scope</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="gallery.html"
+                    class="btn-outline px-8 py-3 rounded-lg font-bold border-purple-500 text-purple-400 hover:bg-purple-600 hover:text-white transition-all">View
+                    Full Gallery</a>
+            </div>
+        </section>
+
+        <!-- Learning Center Preview -->
+        <section class="bg-slate-950 py-16 border-t border-slate-800">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center justify-between mb-10">
+                    <div class="mb-6 md:mb-0 text-center md:text-left">
+                        <h2 class="text-3xl font-display font-bold mb-2">Start Your Journey</h2>
+                        <p class="text-slate-400">Curated resources for every astronomer.</p>
+                    </div>
+                    <a href="resources.html"
+                        class="flex items-center gap-2 text-purple-400 font-bold hover:text-purple-300 transition-colors">
+                        All Resources <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Card 1 -->
+                    <a href="resources.html"
+                        class="bg-slate-900 border border-slate-800 p-6 rounded-xl hover:border-purple-500 hover:-translate-y-1 transition-all group">
+                        <div
+                            class="w-12 h-12 bg-purple-900/30 rounded-lg flex items-center justify-center text-purple-400 text-2xl mb-4">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 group-hover:text-purple-400 transition-colors">Beginner's
+                            Guide
+                        </h3>
+                        <p class="text-slate-400 text-sm">Everything you need to know to get started with observation.
+                        </p>
+                    </a>
+
+                    <!-- Card 2 -->
+                    <a href="resources.html"
+                        class="bg-slate-900 border border-slate-800 p-6 rounded-xl hover:border-blue-500 hover:-translate-y-1 transition-all group">
+                        <div
+                            class="w-12 h-12 bg-blue-900/30 rounded-lg flex items-center justify-center text-blue-400 text-2xl mb-4">
+                            <i class="fas fa-telescope"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 group-hover:text-blue-400 transition-colors">Equipment Guide
+                        </h3>
+                        <p class="text-slate-400 text-sm">Find the right telescope, binoculars, and accessories for you.
+                        </p>
+                    </a>
+
+                    <!-- Card 3 -->
+                    <a href="resources.html"
+                        class="bg-slate-900 border border-slate-800 p-6 rounded-xl hover:border-green-500 hover:-translate-y-1 transition-all group">
+                        <div
+                            class="w-12 h-12 bg-green-900/30 rounded-lg flex items-center justify-center text-green-400 text-2xl mb-4">
+                            <i class="fas fa-map"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 group-hover:text-green-400 transition-colors">Star Maps</h3>
+                        <p class="text-slate-400 text-sm">Navigate the night sky with our monthly updated charts.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats / Trust Section -->
+        <section class="py-16 bg-slate-900 border-t border-slate-800">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-slate-800">
+                    <div>
+                        <div class="text-3xl md:text-4xl font-bold font-mono text-white mb-2">25+</div>
+                        <div class="text-xs text-slate-500 uppercase tracking-widest">Years Active</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl md:text-4xl font-bold font-mono text-purple-400 mb-2">10k+</div>
+                        <div class="text-xs text-slate-500 uppercase tracking-widest">Observations</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl md:text-4xl font-bold font-mono text-blue-400 mb-2">500+</div>
+                        <div class="text-xs text-slate-500 uppercase tracking-widest">Members</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl md:text-4xl font-bold font-mono text-green-400 mb-2">100%</div>
+                        <div class="text-xs text-slate-500 uppercase tracking-widest">Clear Skies Aim</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Injection -->
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Astronomy Club</title>
+    <link rel="icon" href="https://fav.farm/🪐" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        slate: { 850: '#151e2e', 900: '#0f172a', 950: '#020617' }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                        mono: ['Orbitron', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-slate-900 text-white min-h-screen flex flex-col">
+
+    <div id="header-placeholder"></div>
+
+    <main class="flex-grow pt-[80px]">
+
+        <!-- Hero -->
+        <section class="bg-slate-950 py-16 border-b border-slate-800 text-center">
+            <h1 class="text-4xl md:text-5xl font-display font-bold mb-4">Cosmic Gallery</h1>
+            <p class="text-slate-400 max-w-2xl mx-auto">Stunning photons collected by our members.</p>
+        </section>
+
+        <!-- Gallery -->
+        <div class="container mx-auto px-4 py-8">
+            <!-- Filter Tags -->
+            <div class="flex flex-wrap gap-2 justify-center mb-10">
+                <button
+                    class="px-4 py-1.5 rounded-full bg-purple-600 text-white text-sm font-bold shadow-lg shadow-purple-900/20">All</button>
+                <button
+                    class="px-4 py-1.5 rounded-full bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white text-sm transition-colors border border-slate-700">Nebulae</button>
+                <button
+                    class="px-4 py-1.5 rounded-full bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white text-sm transition-colors border border-slate-700">Galaxies</button>
+                <button
+                    class="px-4 py-1.5 rounded-full bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white text-sm transition-colors border border-slate-700">Planetary</button>
+                <button
+                    class="px-4 py-1.5 rounded-full bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white text-sm transition-colors border border-slate-700">Solar</button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Img 1 -->
+                <div class="relative group rounded-xl overflow-hidden shadow-2xl h-80">
+                    <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&q=80"
+                        alt="Milky Way Core"
+                        class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    <div
+                        class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="font-bold text-lg text-white">Milky Way Core</h3>
+                        <p class="text-xs text-slate-300">Canon 6D • 14mm f/2.8</p>
+                        <div
+                            class="mt-2 flex justify-between items-center bg-white/10 p-2 rounded-lg backdrop-blur mx-auto">
+                            <span class="text-xs">By <span class="font-bold">Alex Space</span></span>
+                            <i class="far fa-heart text-white"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Img 2 -->
+                <div class="relative group rounded-xl overflow-hidden shadow-2xl h-80">
+                    <img src="https://images.unsplash.com/photo-1543722530-d2c3201371e7?auto=format&fit=crop&q=80"
+                        alt="Deep Field"
+                        class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    <div
+                        class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="font-bold text-lg text-white">Deep Field</h3>
+                        <p class="text-xs text-slate-300">ZWO 1600MM • HaRGB</p>
+                    </div>
+                </div>
+
+                <!-- Img 3 -->
+                <div class="relative group rounded-xl overflow-hidden shadow-2xl h-80">
+                    <img src="https://sm.mashable.com/mashable_in/photo/default/ss-11_pjpf.jpg" alt="Star Cluster"
+                        class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    <div
+                        class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="font-bold text-lg text-white">Star Cluster</h3>
+                        <p class="text-xs text-slate-300">Refractor 80mm</p>
+                    </div>
+                </div>
+
+                <!-- Img 4 -->
+                <div class="relative group rounded-xl overflow-hidden shadow-2xl h-80">
+                    <img src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&q=80"
+                        alt="Full Moon"
+                        class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    <div
+                        class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="font-bold text-lg text-white">Full Moon</h3>
+                        <p class="text-xs text-slate-300">Detail Shot</p>
+                    </div>
+                </div>
+
+                <!-- Img 5 -->
+                <div class="relative group rounded-xl overflow-hidden shadow-2xl h-80">
+                    <img src="https://images.unsplash.com/photo-1541873676-a18131494184?auto=format&fit=crop&q=80"
+                        alt="Launch"
+                        class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    <div
+                        class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="font-bold text-lg text-white">Launch</h3>
+                    </div>
+                </div>
+
+                <!-- Img 6 -->
+                <div class="relative group rounded-xl overflow-hidden shadow-2xl h-80">
+                    <img src="https://static.vecteezy.com/system/resources/previews/024/445/547/large_2x/space-wallpaper-banner-background-stunning-view-of-a-cosmic-galaxy-with-planets-and-space-objects-elements-of-this-image-furnished-by-nasa-generate-ai-free-photo.jpg"
+                        alt="Space"
+                        class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    <div
+                        class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 class="font-bold text-lg text-white">Space</h3>
+                        <p class="text-xs text-slate-300">New Addition</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Photo of the Month Spotlight -->
+        <section class="py-16 bg-slate-900 border-t border-slate-800">
+            <div class="container mx-auto px-4">
+                <div
+                    class="bg-slate-800 border border-slate-700 rounded-3xl overflow-hidden flex flex-col md:flex-row shadow-2xl">
+                    <div
+                        class="md:w-1/2 h-64 md:h-auto bg-[url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&q=80')] bg-cover bg-center">
+                    </div>
+                    <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                        <div class="flex items-center gap-2 mb-4">
+                            <i class="fas fa-trophy text-yellow-500"></i>
+                            <span class="text-yellow-500 font-bold uppercase tracking-widest text-xs">Photo of the
+                                Month</span>
+                        </div>
+                        <h2 class="text-3xl font-display font-bold mb-4">The Galactic Core</h2>
+                        <p class="text-slate-400 mb-6 leading-relaxed">
+                            Captured by member <strong class="text-white">Alex Space</strong> from the Dark Sky Site.
+                            This 4-hour integration reveals incredible dust lane details in the Milky Way.
+                        </p>
+                        <div class="grid grid-cols-3 gap-4 mb-6">
+                            <div class="bg-slate-900 p-3 rounded-lg text-center">
+                                <span class="block text-xs text-slate-500 uppercase">Camera</span>
+                                <span class="font-bold text-sm">Canon 6D</span>
+                            </div>
+                            <div class="bg-slate-900 p-3 rounded-lg text-center">
+                                <span class="block text-xs text-slate-500 uppercase">Lens</span>
+                                <span class="font-bold text-sm">14mm f/2.8</span>
+                            </div>
+                            <div class="bg-slate-900 p-3 rounded-lg text-center">
+                                <span class="block text-xs text-slate-500 uppercase">Exp</span>
+                                <span class="font-bold text-sm">4hrs</span>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn-outline px-6 py-2 rounded-lg text-sm">View High-Res</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Submission Info -->
+        <section class="py-16 bg-slate-950">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-display font-bold mb-6">Submit Your Work</h2>
+                <div class="max-w-2xl mx-auto bg-slate-900/50 p-8 rounded-2xl border border-dashed border-slate-700">
+                    <i class="fas fa-cloud-upload-alt text-4xl text-purple-500 mb-4"></i>
+                    <p class="text-slate-300 mb-6">
+                        Have you captured something amazing? Share it with the club! We accept JPEG, PNG, and TIFF
+                        formats. Please include all acquisition details.
+                    </p>
+                    <button class="btn-primary py-3 px-8 rounded-lg">Upload Photo</button>
+                    <p class="text-xs text-slate-500 mt-4">Max file size: 50MB</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

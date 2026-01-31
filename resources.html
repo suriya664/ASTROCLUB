@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Astronomy Club</title>
+    <link rel="icon" href="https://fav.farm/🪐" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        slate: { 850: '#151e2e', 900: '#0f172a', 950: '#020617' }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                        mono: ['Orbitron', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-slate-900 text-white min-h-screen flex flex-col">
+
+    <div id="header-placeholder"></div>
+
+    <main class="flex-grow pt-[80px]">
+
+        <!-- Hero -->
+        <section class="bg-slate-950 py-16 border-b border-slate-800">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-display font-bold mb-4">Learning Center</h1>
+                <p class="text-slate-400 max-w-2xl mx-auto">Guides, tools, and resources for every stage of your
+                    astronomical journey.</p>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <!-- Cat 1 -->
+                <div
+                    class="bg-slate-800 border border-slate-700 p-6 rounded-xl hover:border-purple-500 transition-colors group cursor-pointer">
+                    <div
+                        class="w-12 h-12 bg-purple-900/30 rounded-lg flex items-center justify-center text-purple-400 text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Beginner's Guide</h3>
+                    <p class="text-slate-400 text-sm">Start here! Learn the basics of stargazing and equipment.</p>
+                </div>
+
+                <!-- Cat 2 -->
+                <div
+                    class="bg-slate-800 border border-slate-700 p-6 rounded-xl hover:border-blue-500 transition-colors group cursor-pointer">
+                    <div
+                        class="w-12 h-12 bg-blue-900/30 rounded-lg flex items-center justify-center text-blue-400 text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-telescope"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Equipment Reviews</h3>
+                    <p class="text-slate-400 text-sm">Unbiased reviews of telescopes, mounts, and cameras.</p>
+                </div>
+
+                <!-- Cat 3 -->
+                <div
+                    class="bg-slate-800 border border-slate-700 p-6 rounded-xl hover:border-green-500 transition-colors group cursor-pointer">
+                    <div
+                        class="w-12 h-12 bg-green-900/30 rounded-lg flex items-center justify-center text-green-400 text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-map"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Sky Maps</h3>
+                    <p class="text-slate-400 text-sm">Monthly star charts and seasonal object lists.</p>
+                </div>
+
+                <!-- Cat 4 -->
+                <div
+                    class="bg-slate-800 border border-slate-700 p-6 rounded-xl hover:border-orange-500 transition-colors group cursor-pointer">
+                    <div
+                        class="w-12 h-12 bg-orange-900/30 rounded-lg flex items-center justify-center text-orange-400 text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Calculators</h3>
+                    <p class="text-slate-400 text-sm">FOV, magnification, and moon phase tools.</p>
+                </div>
+            </div>
+
+            <!-- Content Split -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- Main Content Area -->
+                <div class="lg:col-span-2 space-y-8">
+                    <h2 class="text-2xl font-bold border-l-4 border-purple-500 pl-4">Latest Articles</h2>
+
+                    <!-- Article Card -->
+                    <div
+                        class="bg-slate-800 rounded-xl overflow-hidden flex flex-col md:flex-row hover:shadow-xl transition-shadow group">
+                        <div
+                            class="md:w-1/3 bg-slate-700 bg-[url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80')] bg-cover bg-center h-48 md:h-auto">
+                        </div>
+                        <div class="p-6 md:w-2/3">
+                            <span class="text-purple-400 text-xs font-bold uppercase mb-2 block">Beginner</span>
+                            <h3 class="text-xl font-bold mb-2 group-hover:text-purple-400 transition-colors">How to
+                                Choose Your First Telescope</h3>
+                            <p class="text-slate-400 text-sm mb-4">Refractor, reflector, or catadioptric? We break down
+                                the pros and cons of each telescope type for beginners.</p>
+                            <a href="#"
+                                class="text-white text-sm font-bold flex items-center gap-2 hover:gap-3 transition-all">Read
+                                Guide <i class="fas fa-arrow-right text-purple-500"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Article Card -->
+                    <div
+                        class="bg-slate-800 rounded-xl overflow-hidden flex flex-col md:flex-row hover:shadow-xl transition-shadow group">
+                        <div
+                            class="md:w-1/3 bg-slate-700 bg-[url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&q=80')] bg-cover bg-center h-48 md:h-auto">
+                        </div>
+                        <div class="p-6 md:w-2/3">
+                            <span class="text-blue-400 text-xs font-bold uppercase mb-2 block">Observing</span>
+                            <h3 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">Understanding
+                                Lunar Phases</h3>
+                            <p class="text-slate-400 text-sm mb-4">Why does the moon change shape? Learn about the
+                                mechanics of our nearest neighbor and when to view it.</p>
+                            <a href="#"
+                                class="text-white text-sm font-bold flex items-center gap-2 hover:gap-3 transition-all">Read
+                                Guide <i class="fas fa-arrow-right text-blue-500"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar Tools -->
+                <div class="space-y-8">
+                    <!-- Tool Widget -->
+                    <div class="bg-slate-800 border border-slate-700 rounded-xl p-6">
+                        <h3 class="font-bold mb-4">Moon Phase Calculator</h3>
+                        <div class="bg-slate-900 rounded-lg p-4 text-center">
+                            <i class="fas fa-moon text-4xl text-yellow-100 mb-2"></i>
+                            <div class="font-bold text-lg">Waxing Gibbous</div>
+                            <div class="text-slate-400 text-sm">72% Illuminated</div>
+                            <input type="date"
+                                class="mt-4 bg-slate-800 border border-slate-700 rounded px-2 py-1 text-sm w-full">
+                        </div>
+                    </div>
+
+                    <!-- Recommended Apps -->
+                    <div class="bg-slate-800 border border-slate-700 rounded-xl p-6">
+                        <h3 class="font-bold mb-4">Recommended Apps</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded bg-blue-600 flex items-center justify-center"><i
+                                        class="fas fa-mobile-alt"></i></div>
+                                <div>
+                                    <div class="font-bold text-sm">SkySafari 7</div>
+                                    <div class="text-xs text-slate-400">Best Planetarium</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded bg-indigo-600 flex items-center justify-center"><i
+                                        class="fas fa-star"></i></div>
+                                <div>
+                                    <div class="font-bold text-sm">Stellarium</div>
+                                    <div class="text-xs text-slate-400">Free & Open Source</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="py-16 bg-slate-900 border-t border-slate-800">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-display font-bold mb-10 text-center">Frequently Asked Questions</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Q1 -->
+                    <div class="bg-slate-800 p-6 rounded-xl">
+                        <h3 class="font-bold text-lg mb-2 text-purple-400">Do I need a telescope to join?</h3>
+                        <p class="text-slate-400 text-sm">Not at all! Many members start with binoculars or just their
+                            eyes. We also have loaner equipment available.</p>
+                    </div>
+                    <!-- Q2 -->
+                    <div class="bg-slate-800 p-6 rounded-xl">
+                        <h3 class="font-bold text-lg mb-2 text-purple-400">Where are the observation sites?</h3>
+                        <p class="text-slate-400 text-sm">We have a private site 45 mins from the city center.
+                            Directions are provided upon membership registration.</p>
+                    </div>
+                    <!-- Q3 -->
+                    <div class="bg-slate-800 p-6 rounded-xl">
+                        <h3 class="font-bold text-lg mb-2 text-purple-400">Are kids allowed at events?</h3>
+                        <p class="text-slate-400 text-sm">Yes! We are family-friendly. However, we ask that young
+                            children be supervised around expensive equipment.</p>
+                    </div>
+                    <!-- Q4 -->
+                    <div class="bg-slate-800 p-6 rounded-xl">
+                        <h3 class="font-bold text-lg mb-2 text-purple-400">How much is membership?</h3>
+                        <p class="text-slate-400 text-sm">Annual dues are $50 for individuals and $75 for families. This
+                            covers site maintenance and event costs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Lost in Space - Astronomy Club</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        slate: { 850: '#151e2e', 900: '#0f172a', 950: '#020617' }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                        mono: ['Orbitron', 'monospace'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-slate-950 text-white h-screen flex flex-col items-center justify-center overflow-hidden relative">
+
+    <!-- Background Starfield -->
+    <canvas id="starfield" class="absolute inset-0 z-0 opacity-50"></canvas>
+
+    <!-- Content -->
+    <div class="relative z-10 text-center px-4">
+        <!-- Floating Astronaut (Icon or Image) -->
+        <div class="text-9xl mb-8 animate-float text-slate-700">
+            <i class="fas fa-user-astronaut"></i>
+        </div>
+
+        <h1
+            class="text-9xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-600 mb-2">
+            404</h1>
+        <h2 class="text-3xl font-bold mb-6">Houston, We Have a Problem</h2>
+        <p class="text-slate-400 text-lg max-w-md mx-auto mb-10">
+            The page you're looking for seems to have drifted into a black hole or doesn't exist in this dimension.
+        </p>
+
+        <div class="flex flex-col md:flex-row gap-4 justify-center">
+            <a href="index.html"
+                class="btn-primary py-3 px-8 rounded-lg shadow-lg hover:shadow-purple-900/40 font-bold transition-all">
+                <i class="fas fa-shuttle-space mr-2"></i> Return to Earth
+            </a>
+            <button onclick="history.back()"
+                class="btn-outline border-slate-700 text-slate-300 hover:text-white px-8 py-3 rounded-lg font-bold">
+                Go Back
+            </button>
+        </div>
+    </div>
+
+    <!-- Planet Decoration -->
+    <div
+        class="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-gradient-to-br from-blue-900 to-purple-900 opacity-20 blur-3xl">
+    </div>
+    <div
+        class="absolute -top-32 -left-32 w-64 h-64 rounded-full bg-gradient-to-br from-purple-900 to-blue-900 opacity-10 blur-3xl">
+    </div>
+
+    <script>
+        // Use existing starfield logic or simplified one
+        const canvas = document.getElementById('starfield');
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+            let stars = [];
+
+            function resize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                init();
+            }
+
+            function init() {
+                stars = [];
+                const count = 200;
+                for (let i = 0; i < count; i++) {
+                    stars.push({
+                        x: Math.random() * canvas.width,
+                        y: Math.random() * canvas.height,
+                        s: Math.random() * 2,
+                        o: Math.random()
+                    });
+                }
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = '#fff';
+                stars.forEach(st => {
+                    ctx.globalAlpha = st.o;
+                    ctx.beginPath();
+                    ctx.arc(st.x, st.y, st.s, 0, Math.PI * 2);
+                    ctx.fill();
+                    st.o += (Math.random() - 0.5) * 0.01;
+                    if (st.o < 0) st.o = 0; if (st.o > 1) st.o = 1;
+                });
+                requestAnimationFrame(draw);
+            }
+
+            window.addEventListener('resize', resize);
+            resize();
+            draw();
+        }
+    </script>
+</body>
+
+</html>
