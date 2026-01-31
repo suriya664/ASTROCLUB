@@ -85,7 +85,7 @@ function getNavbarHTML() {
     const isActive = (path) => currentPath.includes(path) ? 'text-amber-400 font-bold border-b-2 border-amber-400' : 'text-slate-200 hover:text-white transition-colors';
 
     return `
-    <nav class="navbar fixed top-0 w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-700 transition-all duration-300">
+    <nav class="navbar fixed top-0 w-full bg-slate-900/90 backdrop-blur-md border-b border-slate-700 transition-all duration-300">
         <div class="container mx-auto px-4 h-full flex items-center justify-between">
             <!-- Brand -->
             <a href="index.html" class="flex items-center gap-3 group">
@@ -124,7 +124,7 @@ function getNavbarHTML() {
         </div>
 
         <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="fixed inset-y-0 left-0 w-64 bg-slate-900 transform -translate-x-full transition-transform duration-300 ease-in-out shadow-2xl lg:hidden z-50 overflow-y-auto">
+        <div id="mobile-menu" class="fixed inset-y-0 left-0 w-64 bg-slate-900 transform -translate-x-full transition-transform duration-300 ease-in-out shadow-2xl lg:hidden overflow-y-auto">
             <div class="p-6">
                 <div class="flex items-center justify-between mb-8">
                     <span class="text-xl font-orbitron font-bold text-white">MENU</span>
@@ -156,7 +156,7 @@ function getNavbarHTML() {
             </div>
         </div>
         <!-- Overlay -->
-        <div id="menu-overlay" class="fixed inset-0 bg-black/50 hidden lg:hidden z-40 backdrop-blur-sm"></div>
+        <div id="menu-overlay" class="fixed inset-0 bg-black/50 hidden lg:hidden backdrop-blur-sm"></div>
     </nav>
     <div class="h-[80px] lg:h-[80px]"></div> <!-- Spacer to prevent overlap -->
     `;

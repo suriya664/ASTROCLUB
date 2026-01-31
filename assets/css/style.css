@@ -39,7 +39,12 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Space Grotesk', sans-serif;
 }
 
@@ -90,6 +95,40 @@ h1, h2, h3, h4, h5, h6 {
 /* Utility to hide elements but keep them accessible if needed, or strictly display none */
 .hidden-force {
     display: none !important;
+}
+
+/* Fix for Navbar overlapping */
+/* Create a high stacking context for the entire header area */
+#header-placeholder {
+    position: relative;
+    z-index: 20000 !important;
+}
+
+/* Enforce fixed positioning and extremely high z-index for navbar */
+.navbar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 25000 !important;
+}
+
+/* Enforce fixed positioning and max z-index for mobile menu */
+#mobile-menu {
+    position: fixed !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 30000 !important;
+}
+
+#menu-overlay {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 24000 !important;
 }
 
 /* Card hover effects */
