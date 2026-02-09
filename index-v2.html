@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="bg-slate-900 text-white min-h-screen flex flex-col">
+<body class="min-h-screen flex flex-col">
 
     <!-- Header Injection -->
     <div id="header-placeholder"></div>
@@ -45,11 +45,11 @@
             <div class="absolute inset-0 z-0">
                 <img src="assets/images/hero-nebula.png" alt="Cosmic Background"
                     class="w-full h-full object-cover opacity-40">
-                <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent"></div>
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-themed via-themed/80 to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-themed via-transparent to-transparent"></div>
             </div>
 
-            <div class="container mx-auto px-4 py-8 lg:py-12 relative z-10">
+            <div class="container mx-auto px-4 py-16 lg:py-28 relative z-10">
                 <div class="flex flex-col lg:flex-row gap-8 items-stretch h-full">
 
                     <!-- Left: Intro & Tonight -->
@@ -60,12 +60,12 @@
                             Your Gateway to the <span
                                 class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">Universe</span>.
                         </h1>
-                        <p class="text-slate-400 text-lg max-w-lg">
+                        <p class="text-secondary-themed text-lg max-w-lg">
                             Track celestial events, join observation nights, and connect with a community of stargazers.
                         </p>
 
                         <div
-                            class="bg-slate-800/80 border border-slate-700 p-6 rounded-2xl flex items-center justify-between shadow-lg">
+                            class="bg-card-themed p-6 rounded-2xl flex items-center justify-between shadow-lg border border-themed">
                             <div>
                                 <div class="text-xs text-slate-500 uppercase font-bold mb-1">Tonight's Moon</div>
                                 <div class="font-display font-bold text-2xl">Waxing Crescent</div>
@@ -87,7 +87,7 @@
 
                     <!-- Right: Week Calendar Widget -->
                     <div
-                        class="lg:w-1/2 bg-slate-800 border border-slate-700 rounded-3xl p-6 shadow-2xl relative overflow-hidden flex flex-col">
+                        class="lg:w-1/2 bg-card-themed border border-themed rounded-3xl p-6 shadow-2xl relative overflow-hidden flex flex-col">
                         <div
                             class="absolute top-0 right-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none">
                         </div>
@@ -100,7 +100,7 @@
                         <div class="flex-grow space-y-3 z-10 overflow-y-auto">
                             <!-- Event Item -->
                             <div
-                                class="bg-slate-900/80 p-4 rounded-xl border border-slate-700/50 hover:border-purple-500 transition-colors flex gap-4 items-center group cursor-pointer">
+                                class="bg-themed p-4 rounded-xl border border-themed hover:border-purple-500 transition-colors flex gap-4 items-center group cursor-pointer">
                                 <div
                                     class="w-14 h-14 bg-purple-900/30 rounded-lg flex flex-col items-center justify-center text-purple-400 font-bold border border-purple-500/20 group-hover:bg-purple-600 group-hover:text-white transition-colors">
                                     <span class="text-xs uppercase">Mon</span>
@@ -170,7 +170,7 @@
         </section>
 
         <!-- Sky Map Promo (Grid) -->
-        <section class="bg-slate-950 py-16">
+        <section class="bg-themed py-16">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-3xl font-display font-bold mb-10">Explore the Night Sky</h2>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -199,7 +199,7 @@
         </section>
 
         <!-- Gallery Highlights -->
-        <section class="bg-slate-900 py-16 border-t border-slate-800">
+        <section class="bg-themed py-16 border-t border-themed">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-3xl font-display font-bold mb-10">Captured by Members</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
@@ -250,7 +250,7 @@
         </section>
 
         <!-- Learning Center Preview -->
-        <section class="bg-slate-950 py-16 border-t border-slate-800">
+        <section class="bg-themed py-16 border-t border-themed">
             <div class="container mx-auto px-4">
                 <div class="flex flex-col md:flex-row items-center justify-between mb-10">
                     <div class="mb-6 md:mb-0 text-center md:text-left">
@@ -266,7 +266,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Card 1 -->
                     <a href="resources.html"
-                        class="bg-slate-900 border border-slate-800 p-6 rounded-xl hover:border-purple-500 hover:-translate-y-1 transition-all group">
+                        class="bg-card-themed border border-themed p-6 rounded-xl hover:border-purple-500 hover:-translate-y-1 transition-all group">
                         <div
                             class="w-12 h-12 bg-purple-900/30 rounded-lg flex items-center justify-center text-purple-400 text-2xl mb-4">
                             <i class="fas fa-book-open"></i>
@@ -283,7 +283,7 @@
                         class="bg-slate-900 border border-slate-800 p-6 rounded-xl hover:border-blue-500 hover:-translate-y-1 transition-all group">
                         <div
                             class="w-12 h-12 bg-blue-900/30 rounded-lg flex items-center justify-center text-blue-400 text-2xl mb-4">
-                            <i class="fas fa-telescope"></i>
+                            <i class="fas fa-binoculars"></i>
                         </div>
                         <h3 class="font-bold text-lg mb-2 group-hover:text-blue-400 transition-colors">Equipment Guide
                         </h3>
@@ -306,7 +306,7 @@
         </section>
 
         <!-- Stats / Trust Section -->
-        <section class="py-16 bg-slate-900 border-t border-slate-800">
+        <section class="py-16 bg-themed border-t border-themed">
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-slate-800">
                     <div>

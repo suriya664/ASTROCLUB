@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Astronomy Club</title>
+    <link rel="icon" href="https://fav.farm/🪐" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -29,17 +30,16 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="bg-slate-900 text-white min-h-screen flex text-sm md:text-base page-dashboard">
+<body class="min-h-screen flex text-sm md:text-base page-dashboard">
 
     <!-- Sidebar Navigation (Desktop) / Mobile Drawer -->
     <aside id="sidebar"
         class="fixed inset-y-0 left-0 w-64 bg-slate-950 border-r border-slate-800 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 z-50 flex flex-col">
         <!-- Brand -->
         <div class="h-20 flex items-center px-6 border-b border-slate-800">
-            <a href="index.html" class="flex items-center gap-3">
-                <i class="fas fa-meteor text-2xl text-purple-500"></i>
-                <span class="text-xl font-orbitron font-bold text-white">ASTRO<span
-                        class="text-purple-500">CLUB</span></span>
+            <a href="index.html" class="flex items-center gap-3 brand-logo">
+                <i class="fas fa-meteor text-purple-500"></i>
+                <span class="font-orbitron font-bold text-themed">ASTRO<span class="text-purple-500">CLUB</span></span>
             </a>
         </div>
 
@@ -69,11 +69,15 @@
             </a>
             <a href="observations.html"
                 class="flex items-center gap-3 px-3 py-3 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors">
-                <i class="fas fa-telescope w-5 text-center"></i> <span>My Logs</span>
+                <i class="fas fa-binoculars w-5 text-center"></i> <span>My Logs</span>
             </a>
             <a href="gallery.html"
                 class="flex items-center gap-3 px-3 py-3 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors">
                 <i class="fas fa-camera w-5 text-center"></i> <span>Photos</span>
+            </a>
+            <a href="#"
+                class="flex items-center gap-3 px-3 py-3 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors">
+                <i class="fas fa-heart w-5 text-center"></i> <span>Favorites</span>
             </a>
             <a href="#"
                 class="flex items-center gap-3 px-3 py-3 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors">
@@ -132,6 +136,11 @@
                 <!-- Filter Icon (Mobile/Tablet optimization constraint) -->
                 <button class="text-slate-400 hover:text-white md:hidden">
                     <i class="fas fa-filter"></i>
+                </button>
+
+                <!-- Favorites -->
+                <button class="relative text-slate-400 hover:text-white" title="Favorites">
+                    <i class="fas fa-heart"></i>
                 </button>
 
                 <!-- Notifications -->
@@ -216,6 +225,58 @@
                         <div class="text-slate-400 text-xs uppercase tracking-wider font-bold mb-1">Photos Shared</div>
                         <div class="text-3xl font-bold text-white">23</div>
                         <div class="text-slate-500 text-xs mt-2">1.2k views</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New Content Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+                <!-- Quick Actions -->
+                <div class="bg-slate-800 border border-slate-700 p-6 rounded-2xl shadow-sm">
+                    <h3 class="font-bold text-lg mb-6 flex items-center gap-2">
+                        <i class="fas fa-bolt text-amber-500"></i> Quick Actions
+                    </h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <a href="observations.html"
+                            class="flex flex-col items-center p-4 rounded-xl bg-slate-900 border border-slate-700 hover:border-purple-500 transition-all text-center group">
+                            <i
+                                class="fas fa-plus-circle text-2xl text-purple-400 mb-2 group-hover:scale-110 transition-transform"></i>
+                            <span class="text-xs font-bold">New Log</span>
+                        </a>
+                        <button
+                            class="flex flex-col items-center p-4 rounded-xl bg-slate-900 border border-slate-700 hover:border-blue-500 transition-all text-center group">
+                            <i
+                                class="fas fa-calendar-plus text-2xl text-blue-400 mb-2 group-hover:scale-110 transition-transform"></i>
+                            <span class="text-xs font-bold">Book Site</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Clear Sky Forecast -->
+                <div class="bg-slate-800 border border-slate-700 p-6 rounded-2xl shadow-sm lg:col-span-2">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="font-bold text-lg flex items-center gap-2">
+                            <i class="fas fa-cloud-sun text-blue-400"></i> Clear Sky Forecast
+                        </h3>
+                        <span class="text-xs text-slate-500">Dark Sky Park, CA</span>
+                    </div>
+                    <div class="grid grid-cols-4 md:grid-cols-7 gap-4">
+                        <div class="flex flex-col items-center p-2 rounded-lg bg-slate-900 border border-slate-700">
+                            <span class="text-[10px] text-slate-500 uppercase">Mon</span>
+                            <i class="fas fa-moon text-yellow-200 my-2"></i>
+                            <span class="text-xs font-bold text-green-400">Clear</span>
+                        </div>
+                        <div class="flex flex-col items-center p-2 rounded-lg bg-slate-900 border border-slate-700">
+                            <span class="text-[10px] text-slate-500 uppercase">Tue</span>
+                            <i class="fas fa-cloud-moon text-slate-400 my-2"></i>
+                            <span class="text-xs font-bold text-yellow-400">Partly</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center p-2 rounded-lg bg-purple-900/20 border border-purple-500/30">
+                            <span class="text-[10px] text-purple-300 uppercase">Wed</span>
+                            <i class="fas fa-star text-purple-400 my-2 animate-pulse"></i>
+                            <span class="text-xs font-bold text-purple-400 capitalize">Perfect</span>
+                        </div>
                     </div>
                 </div>
             </div>

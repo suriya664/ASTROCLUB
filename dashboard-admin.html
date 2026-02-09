@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - Astronomy Club</title>
+    <link rel="icon" href="https://fav.farm/🪐" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -29,17 +30,16 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="bg-slate-900 text-white min-h-screen flex text-sm md:text-base page-dashboard">
+<body class="min-h-screen flex text-sm md:text-base page-dashboard">
 
     <!-- Sidebar Navigation (Desktop) / Mobile Drawer -->
     <aside id="sidebar"
         class="fixed inset-y-0 left-0 w-64 bg-slate-950 border-r border-slate-800 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 z-50 flex flex-col">
         <!-- Brand -->
         <div class="h-20 flex items-center px-6 border-b border-slate-800">
-            <a href="index.html" class="flex items-center gap-3">
-                <i class="fas fa-meteor text-2xl text-purple-500"></i>
-                <span class="text-xl font-orbitron font-bold text-white">ASTRO<span
-                        class="text-purple-500">CLUB</span></span>
+            <a href="index.html" class="flex items-center gap-3 brand-logo">
+                <i class="fas fa-meteor text-purple-500"></i>
+                <span class="font-orbitron font-bold text-themed">ASTRO<span class="text-purple-500">CLUB</span></span>
             </a>
         </div>
 
@@ -73,7 +73,11 @@
             </a>
             <a href="#"
                 class="flex items-center gap-3 px-3 py-3 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors">
-                <i class="fas fa-telescope w-5 text-center"></i> <span>Equipment</span>
+                <i class="fas fa-binoculars w-5 text-center"></i> <span>Equipment</span>
+            </a>
+            <a href="#"
+                class="flex items-center gap-3 px-3 py-3 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors">
+                <i class="fas fa-star w-5 text-center"></i> <span>Featured Content</span>
             </a>
             <a href="#"
                 class="flex items-center gap-3 px-3 py-3 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors">
@@ -201,6 +205,72 @@
                         </div>
                         <div class="text-3xl font-bold text-white">2</div>
                         <div class="text-orange-400 text-xs mt-2">Equipment overdue</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Admin Utility Row -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+                <!-- System Health -->
+                <div class="bg-slate-800 border border-slate-700 p-6 rounded-2xl shadow-sm">
+                    <h3 class="font-bold text-lg mb-6 flex items-center gap-2">
+                        <i class="fas fa-server text-green-500"></i> System Status
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-slate-400">Database</span>
+                            <span
+                                class="text-[10px] bg-green-900/30 text-green-400 px-2 py-0.5 rounded border border-green-500/20">Operational</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-slate-400">Storage</span>
+                            <span class="text-[10px] text-slate-300">82% Full</span>
+                        </div>
+                        <div class="w-full bg-slate-900 h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-orange-500 h-full w-[82%]"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Admin Quick Actions -->
+                <div class="lg:col-span-2 bg-slate-800 border border-slate-700 p-6 rounded-2xl shadow-sm">
+                    <h3 class="font-bold text-lg mb-6 flex items-center gap-2">
+                        <i class="fas fa-tools text-purple-500"></i> Administrative Tasks
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <button
+                            class="flex items-center gap-3 p-3 rounded-xl bg-slate-900 border border-slate-700 hover:border-purple-500 transition-all text-left">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs font-bold">New Announcement</div>
+                                <div class="text-[10px] text-slate-500">Push to all members</div>
+                            </div>
+                        </button>
+                        <button
+                            class="flex items-center gap-3 p-3 rounded-xl bg-slate-900 border border-slate-700 hover:border-blue-500 transition-all text-left">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400">
+                                <i class="fas fa-file-export"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs font-bold">Export Logs</div>
+                                <div class="text-[10px] text-slate-500">CSV format</div>
+                            </div>
+                        </button>
+                        <button
+                            class="flex items-center gap-3 p-3 rounded-xl bg-slate-900 border border-slate-700 hover:border-red-500 transition-all text-left">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-red-500/10 flex items-center justify-center text-red-400">
+                                <i class="fas fa-user-shield"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs font-bold">Permission Audit</div>
+                                <div class="text-[10px] text-slate-500">Review roles</div>
+                            </div>
+                        </button>
                     </div>
                 </div>
             </div>

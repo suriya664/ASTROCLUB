@@ -12,22 +12,18 @@ document.addEventListener('DOMContentLoaded', () => {
 function initTheme() {
     const savedTheme = localStorage.getItem('theme') || 'dark';
     document.documentElement.setAttribute('data-theme', savedTheme);
-    updateThemeIcon(savedTheme);
 
-    const isRTL = localStorage.getItem('rtl') === 'true';
-    if (isRTL) document.documentElement.setAttribute('dir', 'rtl');
-}
-
-function toggleRTL() {
-    const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
-    if (isRTL) {
-        document.documentElement.removeAttribute('dir');
-        localStorage.setItem('rtl', 'false');
+    // Satisfy Tailwind's darkMode: 'class'
+    if (savedTheme === 'dark' || savedTheme === 'red') {
+        document.documentElement.classList.add('dark');
     } else {
-        document.documentElement.setAttribute('dir', 'rtl');
-        localStorage.setItem('rtl', 'true');
+        document.documentElement.classList.remove('dark');
     }
+
+    updateThemeIcon(savedTheme);
 }
+
+
 
 function toggleTheme(mode) {
     // Mode can be 'light', 'dark', 'red'
@@ -43,6 +39,14 @@ function toggleTheme(mode) {
 
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
+
+    // Satisfy Tailwind's darkMode: 'class'
+    if (newTheme === 'dark' || newTheme === 'red') {
+        document.documentElement.classList.add('dark');
+    } else {
+        document.documentElement.classList.remove('dark');
+    }
+
     updateThemeIcon(newTheme);
 }
 
@@ -85,12 +89,12 @@ function getNavbarHTML() {
     const isActive = (path) => currentPath.includes(path) ? 'text-amber-400 font-bold border-b-2 border-amber-400' : 'text-slate-200 hover:text-white transition-colors';
 
     return `
-    <nav class="navbar fixed top-0 w-full bg-slate-900/90 backdrop-blur-md border-b border-slate-700 transition-all duration-300">
-        <div class="container mx-auto px-4 h-full flex items-center justify-between">
+    <nav class="navbar fixed top-0 w-full bg-slate-900/90 backdrop-blur-md border-b border-slate-700 transition-all duration-300 z-[25000]">
+        <div class="container mx-auto px-4 h-full flex items-center justify-between relative z-[26000]">
             <!-- Brand -->
-            <a href="index.html" class="flex items-center gap-3 group">
-                <i class="fas fa-meteor text-3xl text-purple-500 group-hover:rotate-12 transition-transform"></i>
-                <span class="text-2xl font-orbitron font-bold text-white tracking-wider">ASTRO<span class="text-purple-500">CLUB</span></span>
+            <a href="index.html" class="flex items-center gap-3 group brand-logo">
+                <i class="fas fa-meteor text-purple-500 group-hover:rotate-12 transition-transform"></i>
+                <span class="font-orbitron font-bold text-white tracking-wider">ASTRO<span class="text-purple-500">CLUB</span></span>
             </a>
 
             <!-- Desktop Menu -->
@@ -106,9 +110,6 @@ function getNavbarHTML() {
 
             <!-- Right Actions -->
             <div class="hidden lg:flex items-center gap-3">
-                <button onclick="toggleRTL()" class="w-10 h-10 rounded-full bg-slate-800 text-slate-300 hover:bg-slate-700 transition-colors flex items-center justify-center font-bold text-xs" title="Toggle RTL">
-                    RTL
-                </button>
                 <button onclick="toggleTheme()" class="w-10 h-10 rounded-full bg-slate-800 text-amber-300 hover:bg-slate-700 transition-colors flex items-center justify-center">
                     <i id="theme-toggle-icon" class="fas fa-moon"></i>
                 </button>
@@ -122,43 +123,40 @@ function getNavbarHTML() {
                 <i class="fas fa-bars"></i>
             </button>
         </div>
+    </nav>
 
-        <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="fixed inset-y-0 left-0 w-64 bg-slate-900 transform -translate-x-full transition-transform duration-300 ease-in-out shadow-2xl lg:hidden overflow-y-auto">
-            <div class="p-6">
-                <div class="flex items-center justify-between mb-8">
-                    <span class="text-xl font-orbitron font-bold text-white">MENU</span>
-                    <button id="close-menu-btn" class="text-slate-400 hover:text-white">
-                        <i class="fas fa-times text-xl"></i>
-                    </button>
-                </div>
-                <div class="flex flex-col gap-4">
-                    <a href="index.html" class="text-slate-200 hover:text-purple-400 py-2 border-b border-slate-800">Home</a>
-                    <a href="index-v2.html" class="text-slate-200 hover:text-purple-400 py-2 border-b border-slate-800">Home v2</a>
-                    <a href="dashboard-member.html" class="text-slate-200 hover:text-purple-400 py-2 border-b border-slate-800">Dashboard</a>
-                    <a href="events.html" class="text-slate-200 hover:text-purple-400 py-2 border-b border-slate-800">Events</a>
-                    <a href="observations.html" class="text-slate-200 hover:text-purple-400 py-2 border-b border-slate-800">Observations</a>
-                    <a href="gallery.html" class="text-slate-200 hover:text-purple-400 py-2 border-b border-slate-800">Gallery</a>
-                    <a href="resources.html" class="text-slate-200 hover:text-purple-400 py-2 border-b border-slate-800">Learn</a>
-                    <div class="mt-4 pt-4 flex items-center justify-between">
-                        <span class="text-sm text-slate-400">Settings</span>
-                        <div class="flex gap-4">
-                            <button onclick="toggleRTL()" class="w-8 h-8 rounded-full bg-slate-800 text-slate-300 flex items-center justify-center text-xs font-bold">
-                                RTL
-                            </button>
-                            <button onclick="toggleTheme()" class="w-8 h-8 rounded-full bg-slate-800 text-amber-300 flex items-center justify-center">
-                                <i class="fas fa-adjust"></i>
-                            </button>
-                        </div>
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="fixed inset-y-0 left-0 w-64 bg-slate-900 transform -translate-x-full transition-transform duration-300 ease-in-out shadow-2xl lg:hidden z-[30000] overflow-y-auto">
+        <div class="p-6">
+            <div class="flex items-center justify-between mb-8">
+                <span class="text-xl font-orbitron font-bold text-white">MENU</span>
+                <button id="close-menu-btn" class="text-slate-400 hover:text-white">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <div class="flex flex-col gap-4">
+                <a href="index.html" class="text-slate-200 hover:text-purple-400 py-2 border-b border-slate-800">Home</a>
+                <a href="index-v2.html" class="text-slate-200 hover:text-purple-400 py-2 border-b border-slate-800">Home v2</a>
+                <a href="dashboard-member.html" class="text-slate-200 hover:text-purple-400 py-2 border-b border-slate-800">Dashboard</a>
+                <a href="events.html" class="text-slate-200 hover:text-purple-400 py-2 border-b border-slate-800">Events</a>
+                <a href="observations.html" class="text-slate-200 hover:text-purple-400 py-2 border-b border-slate-800">Observations</a>
+                <a href="gallery.html" class="text-slate-200 hover:text-purple-400 py-2 border-b border-slate-800">Gallery</a>
+                <a href="resources.html" class="text-slate-200 hover:text-purple-400 py-2 border-b border-slate-800">Learn</a>
+                <div class="mt-4 pt-4 flex items-center justify-between">
+                    <span class="text-sm text-slate-400">Settings</span>
+                    <div class="flex gap-4">
+                        <button onclick="toggleTheme()" class="w-8 h-8 rounded-full bg-slate-800 text-amber-300 flex items-center justify-center">
+                            <i class="fas fa-adjust"></i>
+                        </button>
                     </div>
-                    <a href="login.html" class="mt-4 w-full btn-primary text-center py-3 rounded-lg">Member Login</a>
                 </div>
+                <a href="login.html" class="mt-4 w-full btn-primary text-center py-3 rounded-lg">Member Login</a>
             </div>
         </div>
-        <!-- Overlay -->
-        <div id="menu-overlay" class="fixed inset-0 bg-black/50 hidden lg:hidden backdrop-blur-sm"></div>
-    </nav>
-    <div class="h-[80px] lg:h-[80px]"></div> <!-- Spacer to prevent overlap -->
+    </div>
+    <!-- Overlay -->
+    <div id="menu-overlay" class="fixed inset-0 top-[64px] lg:top-[80px] bg-black/60 hidden lg:hidden backdrop-blur-sm z-[24000]"></div>
+    <div class="h-[64px] lg:h-[80px]"></div> <!-- Spacer to prevent overlap -->
     `;
 }
 
@@ -172,9 +170,9 @@ function getFooterHTML() {
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 <!-- Brand Col -->
                 <div>
-                    <a href="#" class="flex items-center gap-3 mb-6">
-                        <i class="fas fa-meteor text-2xl text-purple-500"></i>
-                        <span class="text-xl font-orbitron font-bold text-white tracking-wider">ASTRO<span class="text-purple-500">CLUB</span></span>
+                    <a href="index.html" class="flex items-center gap-3 mb-6 brand-logo">
+                        <i class="fas fa-meteor text-purple-500"></i>
+                        <span class="font-orbitron font-bold text-white tracking-wider">ASTRO<span class="text-purple-500">CLUB</span></span>
                     </a>
                     <p class="text-sm leading-relaxed mb-6 text-slate-400">
                         Join our community of stargazers. We explore the cosmos, share observations, and learn together under the night sky.

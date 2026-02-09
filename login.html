@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Astronomy Club</title>
+    <link rel="icon" href="https://fav.farm/🪐" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -28,18 +29,18 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="bg-slate-900 text-white h-screen overflow-hidden flex page-login">
+<body class="h-screen overflow-hidden flex page-login">
 
     <!-- Left Side (Image/Branding) - Hidden on Mobile -->
     <div class="hidden lg:flex w-1/2 relative flex-col justify-center items-center bg-slate-950 overflow-hidden">
         <div
             class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-40">
         </div>
-        <div class="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-slate-900/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-card-themed/80 to-card-themed/40"></div>
 
         <div class="relative z-10 text-center p-12">
             <h2 class="text-4xl font-display font-bold mb-6 text-white">Welcome Back, Stargazer</h2>
-            <p class="text-xl text-slate-300 max-w-md mx-auto leading-relaxed">
+            <p class="text-xl text-secondary-themed max-w-md mx-auto leading-relaxed">
                 "The cosmos is within us. We are made of star-stuff. We are a way for the universe to know itself."
             </p>
             <div class="mt-8 flex justify-center gap-2 text-purple-400">
@@ -54,7 +55,7 @@
     </div>
 
     <!-- Right Side (Login Form) -->
-    <div class="w-full lg:w-1/2 flex items-center justify-center p-6 relative bg-slate-900">
+    <div class="w-full lg:w-1/2 flex items-center justify-center p-6 relative bg-themed">
         <!-- Close Button (Mobile) -->
         <a href="index.html" class="absolute top-6 right-6 text-slate-500 hover:text-white transition-colors">
             <i class="fas fa-times text-2xl"></i>
@@ -71,7 +72,7 @@
             </div>
 
             <div
-                class="bg-slate-800/50 backdrop-blur-lg border border-slate-700/50 rounded-2xl p-8 shadow-2xl relative overflow-hidden">
+                class="bg-card-themed backdrop-blur-lg border border-themed rounded-2xl p-8 shadow-2xl relative overflow-hidden">
                 <div
                     class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500">
                 </div>
@@ -85,14 +86,14 @@
                             <i
                                 class="fas fa-user absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 group-focus-within:text-purple-500 transition-colors"></i>
                             <input type="email" placeholder="Email or Username"
-                                class="w-full bg-slate-900/80 border border-slate-700 text-white rounded-lg py-3 pl-12 pr-4 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all placeholder:text-slate-600">
+                                class="w-full bg-themed/80 border border-themed text-themed rounded-lg py-3 pl-12 pr-4 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all placeholder:text-secondary-themed/50">
                         </div>
 
                         <div class="relative group">
                             <i
                                 class="fas fa-lock absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 group-focus-within:text-purple-500 transition-colors"></i>
                             <input type="password" placeholder="Password"
-                                class="w-full bg-slate-900/80 border border-slate-700 text-white rounded-lg py-3 pl-12 pr-4 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all placeholder:text-slate-600">
+                                class="w-full bg-themed/80 border border-themed text-themed rounded-lg py-3 pl-12 pr-4 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all placeholder:text-secondary-themed/50">
                             <button type="button"
                                 class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 hover:text-white">
                                 <i class="far fa-eye"></i>
