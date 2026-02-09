@@ -15,16 +15,6 @@
     --nav-height-mobile: 64px;
 }
 
-[data-theme="light"] {
-    --primary-color: #0284c7;
-    --secondary-color: #7C3AED;
-    --accent-color: #F59E0B;
-    --bg-color: #F0F9FF;
-    --text-color: #000000;
-    --text-secondary: #334155;
-    --card-bg: #FFFFFF;
-    --border-color: #E2E8F0;
-}
 
 [data-theme="red"] {
     --primary-color: #1A0000;
@@ -196,7 +186,7 @@ h6 {
 }
 
 .border-themed {
-    border-color: var(--border-color) !important;
+    border-color: var(--border-color);
 }
 
 /* Apply transitions to all elements that change with theme */

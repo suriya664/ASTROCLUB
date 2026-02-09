@@ -143,11 +143,20 @@
                     <i class="fas fa-heart"></i>
                 </button>
 
+                <!-- Theme Toggle -->
+                <button id="theme-toggle"
+                    class="p-2 rounded-lg bg-card-themed border border-themed text-secondary-themed hover:text-white transition-all shadow-lg"
+                    title="Toggle Universe Mode">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block"></i>
+                </button>
+
                 <!-- Notifications -->
-                <button class="relative text-slate-400 hover:text-white">
+                <button class="relative text-secondary-themed hover:text-white">
                     <i class="fas fa-bell"></i>
                     <span class="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full"></span>
                 </button>
+
 
                 <!-- User Dropdown (Simplified) -->
                 <a href="profile.html"
@@ -177,56 +186,63 @@
             <!-- Stats Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Stat Card 1 -->
-                <div class="bg-slate-800 border border-slate-700 rounded-xl p-5 relative overflow-hidden group">
+                <div class="bg-card-themed border border-themed rounded-xl p-5 relative overflow-hidden group">
                     <div
                         class="absolute right-0 top-0 w-24 h-24 bg-purple-500/10 rounded-full -mr-6 -mt-6 group-hover:bg-purple-500/20 transition-colors">
                     </div>
                     <div class="relative z-10">
-                        <div class="text-slate-400 text-xs uppercase tracking-wider font-bold mb-1">Total Observations
+                        <div class="text-secondary-themed text-xs uppercase tracking-wider font-bold mb-1">Total
+                            Observations
                         </div>
-                        <div class="text-3xl font-bold text-white">47</div>
-                        <div class="text-green-400 text-xs mt-2 flex items-center gap-1"><i class="fas fa-arrow-up"></i>
+                        <div class="text-3xl font-bold text-themed">47</div>
+                        <div class="text-green-400 text-xs mt-2 flex items-center gap-1 font-bold"><i
+                                class="fas fa-arrow-up"></i>
                             +5 this month</div>
                     </div>
                 </div>
 
+
                 <!-- Stat Card 2 -->
-                <div class="bg-slate-800 border border-slate-700 rounded-xl p-5 relative overflow-hidden group">
+                <div class="bg-card-themed border border-themed rounded-xl p-5 relative overflow-hidden group">
                     <div
                         class="absolute right-0 top-0 w-24 h-24 bg-blue-500/10 rounded-full -mr-6 -mt-6 group-hover:bg-blue-500/20 transition-colors">
                     </div>
                     <div class="relative z-10">
-                        <div class="text-slate-400 text-xs uppercase tracking-wider font-bold mb-1">Upcoming Events
+                        <div class="text-secondary-themed text-xs uppercase tracking-wider font-bold mb-1">Upcoming
+                            Events
                         </div>
-                        <div class="text-3xl font-bold text-white">3</div>
-                        <div class="text-slate-500 text-xs mt-2">Next: Tomorrow</div>
+                        <div class="text-3xl font-bold text-themed">3</div>
+                        <div class="text-secondary-themed text-xs mt-2 font-medium">Next: Tomorrow</div>
                     </div>
                 </div>
 
                 <!-- Stat Card 3 -->
-                <div class="bg-slate-800 border border-slate-700 rounded-xl p-5 relative overflow-hidden group">
+                <div class="bg-card-themed border border-themed rounded-xl p-5 relative overflow-hidden group">
                     <div
                         class="absolute right-0 top-0 w-24 h-24 bg-orange-500/10 rounded-full -mr-6 -mt-6 group-hover:bg-orange-500/20 transition-colors">
                     </div>
                     <div class="relative z-10">
-                        <div class="text-slate-400 text-xs uppercase tracking-wider font-bold mb-1">Current Streak</div>
-                        <div class="text-3xl font-bold text-white">7 <span
-                                class="text-sm font-normal text-slate-500">days</span></div>
+                        <div class="text-secondary-themed text-xs uppercase tracking-wider font-bold mb-1">Current
+                            Streak</div>
+                        <div class="text-3xl font-bold text-themed">7 <span
+                                class="text-sm font-normal text-secondary-themed">days</span></div>
                         <div class="text-orange-400 text-xs mt-2 font-bold">🔥 On Fire!</div>
                     </div>
                 </div>
 
                 <!-- Stat Card 4 -->
-                <div class="bg-slate-800 border border-slate-700 rounded-xl p-5 relative overflow-hidden group">
+                <div class="bg-card-themed border border-themed rounded-xl p-5 relative overflow-hidden group">
                     <div
                         class="absolute right-0 top-0 w-24 h-24 bg-green-500/10 rounded-full -mr-6 -mt-6 group-hover:bg-green-500/20 transition-colors">
                     </div>
                     <div class="relative z-10">
-                        <div class="text-slate-400 text-xs uppercase tracking-wider font-bold mb-1">Photos Shared</div>
-                        <div class="text-3xl font-bold text-white">23</div>
-                        <div class="text-slate-500 text-xs mt-2">1.2k views</div>
+                        <div class="text-secondary-themed text-xs uppercase tracking-wider font-bold mb-1">Photos Shared
+                        </div>
+                        <div class="text-3xl font-bold text-themed">23</div>
+                        <div class="text-secondary-themed text-xs mt-2 font-medium">1.2k views</div>
                     </div>
                 </div>
+
             </div>
 
             <!-- New Content Grid -->

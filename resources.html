@@ -33,7 +33,8 @@
 
     <div id="header-placeholder"></div>
 
-    <main class="flex-grow pt-[80px]">
+    <main class="flex-grow">
+
 
         <!-- Hero -->
         <section class="bg-card-themed py-28 border-b border-themed">
@@ -49,9 +50,9 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
                 <!-- Cat 1 -->
                 <div
-                    class="bg-card-themed border border-themed p-6 rounded-xl hover:border-purple-500 transition-colors group cursor-pointer">
+                    class="bg-card-themed border border-themed p-6 rounded-xl hover:border-purple-500 transition-colors group cursor-pointer text-center">
                     <div
-                        class="w-12 h-12 bg-purple-900/30 rounded-lg flex items-center justify-center text-purple-400 text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        class="w-12 h-12 bg-purple-900/30 rounded-lg flex items-center justify-center text-purple-400 text-2xl mb-4 mx-auto group-hover:scale-110 transition-transform">
                         <i class="fas fa-book-open"></i>
                     </div>
                     <h3 class="font-bold text-lg mb-2">Beginner's Guide</h3>
@@ -60,9 +61,9 @@
 
                 <!-- Cat 2 -->
                 <div
-                    class="bg-slate-800 border border-slate-700 p-6 rounded-xl hover:border-blue-500 transition-colors group cursor-pointer">
+                    class="bg-card-themed border border-themed p-6 rounded-xl hover:border-blue-500 transition-colors group cursor-pointer text-center">
                     <div
-                        class="w-12 h-12 bg-blue-900/30 rounded-lg flex items-center justify-center text-blue-400 text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        class="w-12 h-12 bg-blue-900/30 rounded-lg flex items-center justify-center text-blue-400 text-2xl mb-4 mx-auto group-hover:scale-110 transition-transform">
                         <i class="fas fa-binoculars"></i>
                     </div>
                     <h3 class="font-bold text-lg mb-2">Equipment Reviews</h3>
@@ -71,9 +72,9 @@
 
                 <!-- Cat 3 -->
                 <div
-                    class="bg-slate-800 border border-slate-700 p-6 rounded-xl hover:border-green-500 transition-colors group cursor-pointer">
+                    class="bg-card-themed border border-themed p-6 rounded-xl hover:border-green-500 transition-colors group cursor-pointer text-center">
                     <div
-                        class="w-12 h-12 bg-green-900/30 rounded-lg flex items-center justify-center text-green-400 text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        class="w-12 h-12 bg-green-900/30 rounded-lg flex items-center justify-center text-green-400 text-2xl mb-4 mx-auto group-hover:scale-110 transition-transform">
                         <i class="fas fa-map"></i>
                     </div>
                     <h3 class="font-bold text-lg mb-2">Sky Maps</h3>
@@ -82,14 +83,15 @@
 
                 <!-- Cat 4 -->
                 <div
-                    class="bg-slate-800 border border-slate-700 p-6 rounded-xl hover:border-orange-500 transition-colors group cursor-pointer">
+                    class="bg-card-themed border border-themed p-6 rounded-xl hover:border-orange-500 transition-colors group cursor-pointer text-center">
                     <div
-                        class="w-12 h-12 bg-orange-900/30 rounded-lg flex items-center justify-center text-orange-400 text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        class="w-12 h-12 bg-orange-900/30 rounded-lg flex items-center justify-center text-orange-400 text-2xl mb-4 mx-auto group-hover:scale-110 transition-transform">
                         <i class="fas fa-calculator"></i>
                     </div>
                     <h3 class="font-bold text-lg mb-2">Calculators</h3>
                     <p class="text-slate-400 text-sm">FOV, magnification, and moon phase tools.</p>
                 </div>
+
             </div>
 
             <!-- Content Split -->
@@ -119,7 +121,7 @@
 
                     <!-- Article Card -->
                     <div
-                        class="bg-slate-800 rounded-xl overflow-hidden flex flex-col md:flex-row hover:shadow-xl transition-shadow group">
+                        class="bg-card-themed rounded-xl overflow-hidden flex flex-col md:flex-row hover:shadow-xl transition-shadow group border border-themed">
                         <div
                             class="md:w-1/3 bg-slate-700 bg-[url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&q=80')] bg-cover bg-center h-48 md:h-auto">
                         </div>
@@ -134,6 +136,7 @@
                                 Guide <i class="fas fa-arrow-right text-blue-500"></i></a>
                         </div>
                     </div>
+
                 </div>
 
                 <!-- Sidebar Tools -->
@@ -151,20 +154,23 @@
                     </div>
 
                     <!-- Recommended Apps -->
-                    <div class="bg-slate-800 border border-slate-700 rounded-xl p-6">
+                    <div class="bg-card-themed border border-themed rounded-xl p-6">
                         <h3 class="font-bold mb-4">Recommended Apps</h3>
                         <div class="space-y-3">
-                            <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 rounded bg-blue-600 flex items-center justify-center"><i
-                                        class="fas fa-mobile-alt"></i></div>
+                            <div
+                                class="flex items-center gap-3 p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors cursor-pointer">
+                                <div class="w-10 h-10 rounded bg-blue-600 flex items-center justify-center text-white">
+                                    <i class="fas fa-mobile-alt"></i></div>
                                 <div>
                                     <div class="font-bold text-sm">SkySafari 7</div>
                                     <div class="text-xs text-slate-400">Best Planetarium</div>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 rounded bg-indigo-600 flex items-center justify-center"><i
-                                        class="fas fa-star"></i></div>
+                            <div
+                                class="flex items-center gap-3 p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors cursor-pointer">
+                                <div
+                                    class="w-10 h-10 rounded bg-indigo-600 flex items-center justify-center text-white">
+                                    <i class="fas fa-star"></i></div>
                                 <div>
                                     <div class="font-bold text-sm">Stellarium</div>
                                     <div class="text-xs text-slate-400">Free & Open Source</div>
@@ -172,6 +178,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -188,23 +195,24 @@
                             eyes. We also have loaner equipment available.</p>
                     </div>
                     <!-- Q2 -->
-                    <div class="bg-slate-800 p-6 rounded-xl">
+                    <div class="bg-card-themed border border-themed p-6 rounded-xl">
                         <h3 class="font-bold text-lg mb-2 text-purple-400">Where are the observation sites?</h3>
                         <p class="text-slate-400 text-sm">We have a private site 45 mins from the city center.
                             Directions are provided upon membership registration.</p>
                     </div>
                     <!-- Q3 -->
-                    <div class="bg-slate-800 p-6 rounded-xl">
+                    <div class="bg-card-themed border border-themed p-6 rounded-xl">
                         <h3 class="font-bold text-lg mb-2 text-purple-400">Are kids allowed at events?</h3>
                         <p class="text-slate-400 text-sm">Yes! We are family-friendly. However, we ask that young
                             children be supervised around expensive equipment.</p>
                     </div>
                     <!-- Q4 -->
-                    <div class="bg-slate-800 p-6 rounded-xl">
+                    <div class="bg-card-themed border border-themed p-6 rounded-xl">
                         <h3 class="font-bold text-lg mb-2 text-purple-400">How much is membership?</h3>
                         <p class="text-slate-400 text-sm">Annual dues are $50 for individuals and $75 for families. This
                             covers site maintenance and event costs.</p>
                     </div>
+
                 </div>
             </div>
         </section>

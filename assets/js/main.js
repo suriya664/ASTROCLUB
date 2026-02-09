@@ -14,11 +14,9 @@ function initTheme() {
     document.documentElement.setAttribute('data-theme', savedTheme);
 
     // Satisfy Tailwind's darkMode: 'class'
-    if (savedTheme === 'dark' || savedTheme === 'red') {
-        document.documentElement.classList.add('dark');
-    } else {
-        document.documentElement.classList.remove('dark');
-    }
+    // Both 'dark' and 'red' are considered dark modes
+    document.documentElement.classList.add('dark');
+
 
     updateThemeIcon(savedTheme);
 }
@@ -31,21 +29,16 @@ function toggleTheme(mode) {
     let newTheme = mode;
 
     if (!mode) {
-        // Cycle if no specific mode passed: dark -> light -> red -> dark
-        if (currentTheme === 'dark') newTheme = 'light';
-        else if (currentTheme === 'light') newTheme = 'red';
-        else newTheme = 'dark';
+        // Cycle if no specific mode passed: dark -> red -> dark
+        newTheme = currentTheme === 'dark' ? 'red' : 'dark';
     }
 
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
 
-    // Satisfy Tailwind's darkMode: 'class'
-    if (newTheme === 'dark' || newTheme === 'red') {
-        document.documentElement.classList.add('dark');
-    } else {
-        document.documentElement.classList.remove('dark');
-    }
+    // Both themes are dark variants
+    document.documentElement.classList.add('dark');
+
 
     updateThemeIcon(newTheme);
 }
@@ -58,9 +51,9 @@ function updateThemeIcon(theme) {
     // Reset classes
     iconBtn.className = 'fas';
 
-    if (theme === 'light') iconBtn.classList.add('fa-sun');
-    else if (theme === 'red') iconBtn.classList.add('fa-eye'); // Red eye for night mode
+    if (theme === 'red') iconBtn.classList.add('fa-eye'); // Red eye for night mode
     else iconBtn.classList.add('fa-moon'); // Default dark
+
 }
 
 /* --- Shared Component Loader --- */

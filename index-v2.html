@@ -37,7 +37,8 @@
     <!-- Header Injection -->
     <div id="header-placeholder"></div>
 
-    <main class="flex-grow pt-[80px]">
+    <main class="flex-grow">
+
 
         <!-- Hero Split (Text + Mini Cal) -->
         <section class="relative">
@@ -53,19 +54,24 @@
                 <div class="flex flex-col lg:flex-row gap-8 items-stretch h-full">
 
                     <!-- Left: Intro & Tonight -->
-                    <div class="lg:w-1/2 flex flex-col justify-center space-y-6">
+                    <div class="lg:w-1/2 flex flex-col justify-center items-center text-center space-y-6">
                         <span class="text-purple-400 font-bold uppercase tracking-widest text-sm">Welcome to the
                             Club</span>
-                        <h1 class="text-4xl md:text-6xl font-display font-bold leading-tight">
+                        <h1
+                            class="text-4xl md:text-6xl font-display font-bold leading-tight drop-shadow-2xl text-white">
                             Your Gateway to the <span
                                 class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">Universe</span>.
                         </h1>
+
                         <p class="text-secondary-themed text-lg max-w-lg">
                             Track celestial events, join observation nights, and connect with a community of stargazers.
                         </p>
 
+
                         <div
-                            class="bg-card-themed p-6 rounded-2xl flex items-center justify-between shadow-lg border border-themed">
+                            class="bg-slate-900/80 p-6 rounded-2xl flex items-center justify-between gap-8 shadow-lg border border-themed w-full max-w-md">
+
+
                             <div>
                                 <div class="text-xs text-slate-500 uppercase font-bold mb-1">Tonight's Moon</div>
                                 <div class="font-display font-bold text-2xl">Waxing Crescent</div>
@@ -76,13 +82,15 @@
                             </div>
                         </div>
 
-                        <div class="flex gap-4 pt-4">
+                        <div class="flex flex-wrap justify-center gap-4 pt-4">
                             <a href="register.html" class="btn-primary py-3 px-8 rounded-lg shadow-lg font-bold">Join
                                 Today</a>
                             <a href="events.html"
-                                class="btn-outline border-slate-700 text-white hover:bg-slate-800 px-8 py-3 rounded-lg font-bold">View
+                                class="btn-outline border-slate-700 text-white hover:bg-white hover:text-slate-900 px-8 py-3 rounded-lg font-bold">View
                                 Full Calendar</a>
+
                         </div>
+
                     </div>
 
                     <!-- Right: Week Calendar Widget -->
@@ -266,42 +274,46 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Card 1 -->
                     <a href="resources.html"
-                        class="bg-card-themed border border-themed p-6 rounded-xl hover:border-purple-500 hover:-translate-y-1 transition-all group">
+                        class="bg-card-themed border border-themed p-8 rounded-xl hover:border-purple-500 hover:-translate-y-1 transition-all group text-center">
                         <div
-                            class="w-12 h-12 bg-purple-900/30 rounded-lg flex items-center justify-center text-purple-400 text-2xl mb-4">
+                            class="w-14 h-14 bg-purple-900/30 rounded-lg flex items-center justify-center text-purple-400 text-2xl mb-6 mx-auto group-hover:scale-110 transition-transform">
                             <i class="fas fa-book-open"></i>
                         </div>
-                        <h3 class="font-bold text-lg mb-2 group-hover:text-purple-400 transition-colors">Beginner's
+                        <h3 class="font-bold text-xl mb-3 group-hover:text-purple-400 transition-colors">Beginner's
                             Guide
                         </h3>
-                        <p class="text-slate-400 text-sm">Everything you need to know to get started with observation.
+                        <p class="text-slate-400 leading-relaxed">Everything you need to know to get started with
+                            observation.
                         </p>
                     </a>
 
                     <!-- Card 2 -->
                     <a href="resources.html"
-                        class="bg-slate-900 border border-slate-800 p-6 rounded-xl hover:border-blue-500 hover:-translate-y-1 transition-all group">
+                        class="bg-card-themed border border-themed p-8 rounded-xl hover:border-blue-500 hover:-translate-y-1 transition-all group text-center">
                         <div
-                            class="w-12 h-12 bg-blue-900/30 rounded-lg flex items-center justify-center text-blue-400 text-2xl mb-4">
+                            class="w-14 h-14 bg-blue-900/30 rounded-lg flex items-center justify-center text-blue-400 text-2xl mb-6 mx-auto group-hover:scale-110 transition-transform">
                             <i class="fas fa-binoculars"></i>
                         </div>
-                        <h3 class="font-bold text-lg mb-2 group-hover:text-blue-400 transition-colors">Equipment Guide
+                        <h3 class="font-bold text-xl mb-3 group-hover:text-blue-400 transition-colors">Equipment Guide
                         </h3>
-                        <p class="text-slate-400 text-sm">Find the right telescope, binoculars, and accessories for you.
+                        <p class="text-slate-400 leading-relaxed">Find the right telescope, binoculars, and accessories
+                            for you.
                         </p>
                     </a>
 
                     <!-- Card 3 -->
                     <a href="resources.html"
-                        class="bg-slate-900 border border-slate-800 p-6 rounded-xl hover:border-green-500 hover:-translate-y-1 transition-all group">
+                        class="bg-card-themed border border-themed p-8 rounded-xl hover:border-green-500 hover:-translate-y-1 transition-all group text-center">
                         <div
-                            class="w-12 h-12 bg-green-900/30 rounded-lg flex items-center justify-center text-green-400 text-2xl mb-4">
+                            class="w-14 h-14 bg-green-900/30 rounded-lg flex items-center justify-center text-green-400 text-2xl mb-6 mx-auto group-hover:scale-110 transition-transform">
                             <i class="fas fa-map"></i>
                         </div>
-                        <h3 class="font-bold text-lg mb-2 group-hover:text-green-400 transition-colors">Star Maps</h3>
-                        <p class="text-slate-400 text-sm">Navigate the night sky with our monthly updated charts.</p>
+                        <h3 class="font-bold text-xl mb-3 group-hover:text-green-400 transition-colors">Star Maps</h3>
+                        <p class="text-slate-400 leading-relaxed">Navigate the night sky with our monthly updated
+                            charts.</p>
                     </a>
                 </div>
+
             </div>
         </section>
 
@@ -310,22 +322,26 @@
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-slate-800">
                     <div>
-                        <div class="text-3xl md:text-4xl font-bold font-mono text-white mb-2">25+</div>
+                        <div class="text-3xl md:text-4xl font-bold font-mono text-white mb-2 drop-shadow-sm">25+</div>
                         <div class="text-xs text-slate-500 uppercase tracking-widest">Years Active</div>
                     </div>
                     <div>
-                        <div class="text-3xl md:text-4xl font-bold font-mono text-purple-400 mb-2">10k+</div>
+                        <div class="text-3xl md:text-4xl font-bold font-mono text-purple-300 mb-2 drop-shadow-sm">10k+
+                        </div>
                         <div class="text-xs text-slate-500 uppercase tracking-widest">Observations</div>
                     </div>
                     <div>
-                        <div class="text-3xl md:text-4xl font-bold font-mono text-blue-400 mb-2">500+</div>
+                        <div class="text-3xl md:text-4xl font-bold font-mono text-blue-300 mb-2 drop-shadow-sm">500+
+                        </div>
                         <div class="text-xs text-slate-500 uppercase tracking-widest">Members</div>
                     </div>
                     <div>
-                        <div class="text-3xl md:text-4xl font-bold font-mono text-green-400 mb-2">100%</div>
+                        <div class="text-3xl md:text-4xl font-bold font-mono text-green-300 mb-2 drop-shadow-sm">100%
+                        </div>
                         <div class="text-xs text-slate-500 uppercase tracking-widest">Clear Skies Aim</div>
                     </div>
                 </div>
+
             </div>
         </section>
     </main>
