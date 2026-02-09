@@ -122,7 +122,10 @@ function getNavbarHTML() {
     <div id="mobile-menu" class="fixed inset-y-0 left-0 w-64 bg-slate-900 transform -translate-x-full transition-transform duration-300 ease-in-out shadow-2xl lg:hidden z-[30000] overflow-y-auto">
         <div class="p-6">
             <div class="flex items-center justify-between mb-8">
-                <span class="text-xl font-orbitron font-bold text-white">MENU</span>
+                <a href="index.html" class="flex items-center gap-2 brand-logo scale-90 -ml-2">
+                    <i class="fas fa-meteor text-purple-500"></i>
+                    <span class="font-orbitron font-bold text-white tracking-wider">ASTRO<span class="text-purple-500">CLUB</span></span>
+                </a>
                 <button id="close-menu-btn" class="text-slate-400 hover:text-white">
                     <i class="fas fa-times text-xl"></i>
                 </button>
