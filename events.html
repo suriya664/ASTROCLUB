@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="bg-slate-900 text-white min-h-screen flex flex-col">
+<body class="bg-themed text-themed min-h-screen flex flex-col">
 
     <!-- Header Injection -->
     <div id="header-placeholder"></div>
@@ -38,10 +38,10 @@
 
 
         <!-- Hero Section -->
-        <section class="bg-slate-950 py-28 border-b border-slate-800">
+        <section class="bg-card-themed py-28 border-b border-themed">
             <div class="container mx-auto px-4 text-center">
-                <h1 class="text-4xl md:text-5xl font-display font-bold mb-4">Cosmic Calendar</h1>
-                <p class="text-slate-400 max-w-2xl mx-auto">Join us for observation nights, workshops, and celestial
+                <h1 class="text-4xl md:text-5xl font-display font-bold mb-4 text-themed">Cosmic Calendar</h1>
+                <p class="text-secondary-themed max-w-2xl mx-auto">Join us for observation nights, workshops, and celestial
                     events.</p>
             </div>
         </section>
@@ -53,69 +53,69 @@
                 <!-- Filters Sidebar -->
                 <aside class="w-full lg:w-1/4 space-y-6">
                     <!-- Events Filter -->
-                    <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-5">
+                    <div class="bg-card-themed/50 border border-themed rounded-xl p-5">
                         <h3 class="font-bold mb-4 flex items-center gap-2"><i class="fas fa-filter text-purple-500"></i>
                             Filters</h3>
                         <div class="space-y-3">
                             <label class="flex items-center gap-2 cursor-pointer">
                                 <input type="checkbox" checked
-                                    class="rounded bg-slate-900 border-slate-700 text-purple-600 focus:ring-0">
-                                <span class="text-sm">Club Meetings</span>
+                                    class="rounded bg-themed border-themed text-purple-600 focus:ring-0">
+                                <span class="text-sm text-themed">Club Meetings</span>
                                 <span class="ml-auto w-2 h-2 rounded-full bg-purple-500"></span>
                             </label>
                             <label class="flex items-center gap-2 cursor-pointer">
                                 <input type="checkbox" checked
-                                    class="rounded bg-slate-900 border-slate-700 text-purple-600 focus:ring-0">
-                                <span class="text-sm">Observations</span>
+                                    class="rounded bg-themed border-themed text-purple-600 focus:ring-0">
+                                <span class="text-sm text-themed">Observations</span>
                                 <span class="ml-auto w-2 h-2 rounded-full bg-yellow-400"></span>
                             </label>
                             <label class="flex items-center gap-2 cursor-pointer">
                                 <input type="checkbox" checked
-                                    class="rounded bg-slate-900 border-slate-700 text-purple-600 focus:ring-0">
-                                <span class="text-sm">Workshops</span>
+                                    class="rounded bg-themed border-themed text-purple-600 focus:ring-0">
+                                <span class="text-sm text-themed">Workshops</span>
                                 <span class="ml-auto w-2 h-2 rounded-full bg-blue-500"></span>
                             </label>
                             <label class="flex items-center gap-2 cursor-pointer">
                                 <input type="checkbox" checked
-                                    class="rounded bg-slate-900 border-slate-700 text-purple-600 focus:ring-0">
-                                <span class="text-sm">Celestial Events</span>
+                                    class="rounded bg-themed border-themed text-purple-600 focus:ring-0">
+                                <span class="text-sm text-themed">Celestial Events</span>
                                 <span class="ml-auto w-2 h-2 rounded-full bg-red-500"></span>
                             </label>
                         </div>
                     </div>
 
                     <!-- Upcoming List -->
-                    <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-5">
-                        <h3 class="font-bold mb-4">Coming Up Soon</h3>
+                    <div class="bg-card-themed/50 border border-themed rounded-xl p-5">
+                        <h3 class="font-bold mb-4 text-themed">Coming Up Soon</h3>
                         <div class="space-y-4">
                             <!-- Mini Card -->
                             <div
-                                class="flex gap-3 items-start group cursor-pointer hover:bg-slate-800 p-2 rounded-lg transition-colors">
+                                class="flex gap-3 items-start group cursor-pointer hover:bg-card-themed p-2 rounded-lg transition-colors">
                                 <div
-                                    class="w-12 h-12 bg-slate-900 rounded-lg flex flex-col items-center justify-center border border-slate-700 group-hover:border-purple-500 transition-colors">
-                                    <span class="text-xs text-slate-500 font-bold uppercase">Aug</span>
-                                    <span class="text-lg font-bold text-white">12</span>
+                                    class="w-12 h-12 bg-card-themed rounded-lg flex flex-col items-center justify-center border border-themed group-hover:border-purple-500 transition-colors">
+                                    <span class="text-xs text-secondary-themed font-bold uppercase">Aug</span>
+                                    <span class="text-lg font-bold text-themed">12</span>
                                 </div>
                                 <div>
                                     <h4
-                                        class="font-bold text-sm leading-tight text-white group-hover:text-purple-400 transition-colors">
+                                        class="font-bold text-sm leading-tight text-themed group-hover:text-purple-400 transition-colors">
                                         Perseid Meteor Shower</h4>
-                                    <span class="text-xs text-slate-400">10:00 PM • Dark Park</span>
+                                    <span class="text-xs text-secondary-themed">10:00 PM • Dark Park</span>
                                 </div>
                             </div>
                             <!-- Mini Card -->
                             <div
-                                class="flex gap-3 items-start group cursor-pointer hover:bg-slate-800 p-2 rounded-lg transition-colors">
+                                class="flex gap-3 items-start group cursor-pointer hover:bg-card-themed p-2 rounded-lg transition-colors">
                                 <div
-                                    class="w-12 h-12 bg-slate-900 rounded-lg flex flex-col items-center justify-center border border-slate-700 group-hover:border-blue-500 transition-colors">
-                                    <span class="text-xs text-slate-500 font-bold uppercase">Aug</span>
-                                    <span class="text-lg font-bold text-white">15</span>
+                                    class="w-12 h-12 bg-card-themed rounded-lg flex flex-col items-center justify-center border border-themed group-hover:border-blue-500 transition-colors">
+                                    <span class="text-xs text-secondary-themed font-bold uppercase">Aug</span>
+                                    <span class="text-lg font-bold text-themed">15</span>
                                 </div>
                                 <div>
                                     <h4
-                                        class="font-bold text-sm leading-tight text-white group-hover:text-blue-400 transition-colors">
+                                        class="font-bold text-sm leading-tight text-themed group-hover:text-blue-400 transition-colors">
                                         Telescope Workshop</h4>
-                                    <span class="text-xs text-slate-400">7:00 PM • Center</span>
+                                    <span class="text-xs text-secondary-themed">7:00 PM • Center</span>
                                 </div>
                             </div>
                         </div>
@@ -130,92 +130,92 @@
                             <button
                                 class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-slate-800 transition-colors"><i
                                     class="fas fa-chevron-left"></i></button>
-                            <h2 class="text-2xl font-display font-bold">August 2024</h2>
+                            <h2 class="text-2xl font-display font-bold text-themed">August 2024</h2>
                             <button
                                 class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-slate-800 transition-colors"><i
                                     class="fas fa-chevron-right"></i></button>
                         </div>
-                        <div class="flex items-center bg-slate-800 rounded-lg p-1 border border-slate-700">
+                        <div class="flex items-center bg-card-themed rounded-lg p-1 border border-themed">
                             <button
-                                class="px-4 py-1.5 rounded-md bg-slate-700 text-white text-sm shadow font-medium">Month</button>
+                                class="px-4 py-1.5 rounded-md bg-themed text-themed text-sm shadow font-medium">Month</button>
                             <button
-                                class="px-4 py-1.5 rounded-md text-slate-400 text-sm hover:text-white transition-colors">Week</button>
+                                class="px-4 py-1.5 rounded-md text-secondary-themed text-sm hover:text-themed transition-colors">Week</button>
                             <button
-                                class="px-4 py-1.5 rounded-md text-slate-400 text-sm hover:text-white transition-colors">List</button>
+                                class="px-4 py-1.5 rounded-md text-secondary-themed text-sm hover:text-themed transition-colors">List</button>
                         </div>
                     </div>
 
                     <!-- Grid -->
                     <div
-                        class="grid grid-cols-7 gap-px bg-slate-700 border border-slate-700 rounded-xl overflow-hidden shadow-2xl">
+                        class="grid grid-cols-7 gap-px border-themed border border-themed rounded-xl overflow-hidden shadow-2xl">
                         <!-- Days Header -->
-                        <div class="bg-slate-800 p-2 text-center text-xs font-bold uppercase text-slate-400">Sun</div>
-                        <div class="bg-slate-800 p-2 text-center text-xs font-bold uppercase text-slate-400">Mon</div>
-                        <div class="bg-slate-800 p-2 text-center text-xs font-bold uppercase text-slate-400">Tue</div>
-                        <div class="bg-slate-800 p-2 text-center text-xs font-bold uppercase text-slate-400">Wed</div>
-                        <div class="bg-slate-800 p-2 text-center text-xs font-bold uppercase text-slate-400">Thu</div>
-                        <div class="bg-slate-800 p-2 text-center text-xs font-bold uppercase text-slate-400">Fri</div>
-                        <div class="bg-slate-800 p-2 text-center text-xs font-bold uppercase text-slate-400">Sat</div>
+                        <div class="bg-card-themed p-2 text-center text-xs font-bold uppercase text-secondary-themed">Sun</div>
+                        <div class="bg-card-themed p-2 text-center text-xs font-bold uppercase text-secondary-themed">Mon</div>
+                        <div class="bg-card-themed p-2 text-center text-xs font-bold uppercase text-secondary-themed">Tue</div>
+                        <div class="bg-card-themed p-2 text-center text-xs font-bold uppercase text-secondary-themed">Wed</div>
+                        <div class="bg-card-themed p-2 text-center text-xs font-bold uppercase text-secondary-themed">Thu</div>
+                        <div class="bg-card-themed p-2 text-center text-xs font-bold uppercase text-secondary-themed">Fri</div>
+                        <div class="bg-card-themed p-2 text-center text-xs font-bold uppercase text-secondary-themed">Sat</div>
 
                         <!-- Empty Previous Month Days -->
-                        <div class="bg-slate-900 h-32 p-2 opacity-50"></div>
-                        <div class="bg-slate-900 h-32 p-2 opacity-50"></div>
-                        <div class="bg-slate-900 h-32 p-2 opacity-50"></div>
-                        <div class="bg-slate-900 h-32 p-2 opacity-50"></div>
+                        <div class="bg-card-themed h-32 p-2 opacity-50"></div>
+                        <div class="bg-card-themed h-32 p-2 opacity-50"></div>
+                        <div class="bg-card-themed h-32 p-2 opacity-50"></div>
+                        <div class="bg-card-themed h-32 p-2 opacity-50"></div>
 
                         <!-- Days -->
                         <!-- Aug 1 (Thu) -->
-                        <div class="bg-slate-900 h-32 p-2 group hover:bg-slate-800/50 transition-colors relative">
-                            <span class="text-sm font-bold text-slate-400">1</span>
+                        <div class="bg-card-themed h-32 p-2 group hover:bg-card-themed/50 transition-colors relative">
+                            <span class="text-sm font-bold text-secondary-themed">1</span>
                         </div>
                         <!-- Aug 2 -->
-                        <div class="bg-slate-900 h-32 p-2 group hover:bg-slate-800/50 transition-colors relative">
-                            <span class="text-sm font-bold text-slate-400">2</span>
+                        <div class="bg-card-themed h-32 p-2 group hover:bg-card-themed/50 transition-colors relative">
+                            <span class="text-sm font-bold text-secondary-themed">2</span>
                         </div>
                         <!-- Aug 3 -->
-                        <div class="bg-slate-900 h-32 p-2 group hover:bg-slate-800/50 transition-colors relative">
-                            <span class="text-sm font-bold text-slate-400">3</span>
+                        <div class="bg-card-themed h-32 p-2 group hover:bg-card-themed/50 transition-colors relative">
+                            <span class="text-sm font-bold text-secondary-themed">3</span>
                             <div
                                 class="mt-1 p-1 rounded bg-purple-900/50 border-l-2 border-purple-500 text-[10px] leading-tight text-purple-200 truncate cursor-pointer hover:bg-purple-900">
                                 Club Meeting
                             </div>
                         </div>
                         <!-- Aug 4 (Sun) -->
-                        <div class="bg-slate-900 h-32 p-2 group hover:bg-slate-800/50 transition-colors relative">
-                            <span class="text-sm font-bold text-slate-400">4</span>
+                        <div class="bg-card-themed h-32 p-2 group hover:bg-card-themed/50 transition-colors relative">
+                            <span class="text-sm font-bold text-secondary-themed">4</span>
                         </div>
 
                         <!-- Aug 5-11 rows (Simplified loop for styling) -->
-                        <div class="bg-slate-900 h-32 p-2"><span class="text-sm font-bold text-slate-400">5</span></div>
-                        <div class="bg-slate-900 h-32 p-2"><span class="text-sm font-bold text-slate-400">6</span></div>
-                        <div class="bg-slate-900 h-32 p-2"><span class="text-sm font-bold text-slate-400">7</span></div>
-                        <div class="bg-slate-900 h-32 p-2"><span class="text-sm font-bold text-slate-400">8</span></div>
-                        <div class="bg-slate-900 h-32 p-2"><span class="text-sm font-bold text-slate-400">9</span></div>
-                        <div class="bg-slate-900 h-32 p-2"><span class="text-sm font-bold text-slate-400">10</span>
+                        <div class="bg-card-themed h-32 p-2"><span class="text-sm font-bold text-secondary-themed">5</span></div>
+                        <div class="bg-card-themed h-32 p-2"><span class="text-sm font-bold text-secondary-themed">6</span></div>
+                        <div class="bg-card-themed h-32 p-2"><span class="text-sm font-bold text-secondary-themed">7</span></div>
+                        <div class="bg-card-themed h-32 p-2"><span class="text-sm font-bold text-secondary-themed">8</span></div>
+                        <div class="bg-card-themed h-32 p-2"><span class="text-sm font-bold text-secondary-themed">9</span></div>
+                        <div class="bg-card-themed h-32 p-2"><span class="text-sm font-bold text-secondary-themed">10</span>
                         </div>
-                        <div class="bg-slate-900 h-32 p-2"><span class="text-sm font-bold text-slate-400">11</span>
+                        <div class="bg-card-themed h-32 p-2"><span class="text-sm font-bold text-secondary-themed">11</span>
                         </div>
 
                         <!-- Aug 12 (Event) -->
-                        <div class="bg-slate-900 h-32 p-2 group hover:bg-slate-800/50 transition-colors relative">
-                            <span class="text-sm font-bold text-white">12</span>
+                        <div class="bg-card-themed h-32 p-2 group hover:bg-card-themed/50 transition-colors relative">
+                            <span class="text-sm font-bold text-themed">12</span>
                             <div class="mt-1 p-1 rounded bg-yellow-900/50 border-l-2 border-yellow-500 text-[10px] leading-tight text-yellow-200 truncate cursor-pointer hover:bg-yellow-900"
                                 onclick="alert('Event Details: Perseid Shower')">
                                 <i class="fas fa-star text-[8px] mr-1"></i> Perseid Shower
                             </div>
-                            <div class="absolute bottom-1 right-1 text-[10px] text-slate-600"><i
-                                    class="fas fa-moon text-yellow-100"></i></div>
+                            <div class="absolute bottom-1 right-1 text-[10px] text-secondary-themed"><i
+                                    class="fas fa-star text-yellow-100"></i></div>
                         </div>
 
                         <!-- Aug 13-14 -->
-                        <div class="bg-slate-900 h-32 p-2"><span class="text-sm font-bold text-slate-400">13</span>
+                        <div class="bg-card-themed h-32 p-2"><span class="text-sm font-bold text-secondary-themed">13</span>
                         </div>
-                        <div class="bg-slate-900 h-32 p-2"><span class="text-sm font-bold text-slate-400">14</span>
+                        <div class="bg-card-themed h-32 p-2"><span class="text-sm font-bold text-secondary-themed">14</span>
                         </div>
 
                         <!-- Aug 15 -->
-                        <div class="bg-slate-900 h-32 p-2 group hover:bg-slate-800/50 transition-colors relative">
-                            <span class="text-sm font-bold text-slate-400">15</span>
+                        <div class="bg-card-themed h-32 p-2 group hover:bg-card-themed/50 transition-colors relative">
+                            <span class="text-sm font-bold text-secondary-themed">15</span>
                             <div
                                 class="mt-1 p-1 rounded bg-blue-900/50 border-l-2 border-blue-500 text-[10px] leading-tight text-blue-200 truncate cursor-pointer hover:bg-blue-900">
                                 Workshop
@@ -224,7 +224,7 @@
 
                         <!-- Aug 16-31 (Rest of month logic placeholder) -->
                         <div
-                            class="bg-slate-900 h-32 p-2 col-span-7 flex items-center justify-center text-slate-600 text-xs italic">
+                            class="bg-card-themed h-32 p-2 col-span-7 flex items-center justify-center text-secondary-themed text-xs italic">
                             ... Remaining days of month ...
                         </div>
                     </div>
@@ -233,46 +233,46 @@
         </div>
 
         <!-- Past Event Highlights -->
-        <section class="py-16 bg-slate-900 border-t border-slate-800">
+        <section class="py-16 bg-themed border-t border-themed">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-display font-bold mb-8 text-center">Past Highlights</h2>
+                <h2 class="text-3xl font-display font-bold mb-8 text-center text-themed">Past Highlights</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="rounded-xl overflow-hidden bg-slate-800 shadow-xl group">
-                        <div class="h-48 bg-slate-700 overflow-hidden relative">
+                    <div class="rounded-xl overflow-hidden bg-card-themed shadow-xl group">
+                        <div class="h-48 bg-card-themed overflow-hidden relative">
                             <img src="https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?auto=format&fit=crop&q=80"
                                 alt="Past Event"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div class="absolute inset-0 bg-black/30"></div>
                         </div>
                         <div class="p-6">
-                            <h3 class="font-bold text-lg mb-2">Solar Eclipse Party</h3>
-                            <p class="text-slate-400 text-sm">Over 200 members gathered to witness the annular eclipse.
+                            <h3 class="font-bold text-lg mb-2 text-themed">Solar Eclipse Party</h3>
+                            <p class="text-secondary-themed text-sm">Over 200 members gathered to witness the annular eclipse.
                                 A day to remember!</p>
                         </div>
                     </div>
-                    <div class="rounded-xl overflow-hidden bg-slate-800 shadow-xl group">
-                        <div class="h-48 bg-slate-700 overflow-hidden relative">
+                    <div class="rounded-xl overflow-hidden bg-card-themed shadow-xl group">
+                        <div class="h-48 bg-card-themed overflow-hidden relative">
                             <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80"
                                 alt="Past Event"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div class="absolute inset-0 bg-black/30"></div>
                         </div>
                         <div class="p-6">
-                            <h3 class="font-bold text-lg mb-2">Deep Sky Workshop</h3>
-                            <p class="text-slate-400 text-sm">Learning the secrets of stacking and processing nebula
+                            <h3 class="font-bold text-lg mb-2 text-themed">Deep Sky Workshop</h3>
+                            <p class="text-secondary-themed text-sm">Learning the secrets of stacking and processing nebula
                                 photos.</p>
                         </div>
                     </div>
-                    <div class="rounded-xl overflow-hidden bg-slate-800 shadow-xl group">
-                        <div class="h-48 bg-slate-700 overflow-hidden relative">
+                    <div class="rounded-xl overflow-hidden bg-card-themed shadow-xl group">
+                        <div class="h-48 bg-card-themed overflow-hidden relative">
                             <img src="https://images.squarespace-cdn.com/content/v1/63bd1a87022f9326886b0c89/33841c2c-7c96-49cc-aace-d404474384d4/FB_IMG_1689701489871.jpg"
                                 alt="Past Event"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                             <div class="absolute inset-0 bg-black/30"></div>
                         </div>
                         <div class="p-6">
-                            <h3 class="font-bold text-lg mb-2">Annual Star Party</h3>
-                            <p class="text-slate-400 text-sm">Camping under the Milky Way with 50+ telescopes.</p>
+                            <h3 class="font-bold text-lg mb-2 text-themed">Annual Star Party</h3>
+                            <p class="text-secondary-themed text-sm">Camping under the Milky Way with 50+ telescopes.</p>
                         </div>
                     </div>
                 </div>
@@ -280,33 +280,33 @@
         </section>
 
         <!-- Meet the Hosts -->
-        <section class="py-16 bg-slate-950">
+        <section class="py-16 bg-card-themed">
             <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl font-display font-bold mb-10">Meet Your Hosts</h2>
+                <h2 class="text-3xl font-display font-bold mb-10 text-themed">Meet Your Hosts</h2>
                 <div class="flex flex-wrap justify-center gap-10">
                     <div class="text-center">
                         <div class="w-24 h-24 rounded-full border-2 border-purple-500 mx-auto mb-4 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80"
                                 alt="Dr. Vega" class="w-full h-full object-cover">
                         </div>
-                        <h4 class="font-bold">Dr. Vega</h4>
-                        <p class="text-xs text-slate-400">Club President</p>
+                        <h4 class="font-bold text-themed">Dr. Vega</h4>
+                        <p class="text-xs text-secondary-themed">Club President</p>
                     </div>
                     <div class="text-center">
                         <div class="w-24 h-24 rounded-full border-2 border-blue-500 mx-auto mb-4 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80"
                                 alt="Leo Star" class="w-full h-full object-cover">
                         </div>
-                        <h4 class="font-bold">Leo Star</h4>
-                        <p class="text-xs text-slate-400">Outreach Coord</p>
+                        <h4 class="font-bold text-themed">Leo Star</h4>
+                        <p class="text-xs text-secondary-themed">Outreach Coord</p>
                     </div>
                     <div class="text-center">
                         <div class="w-24 h-24 rounded-full border-2 border-green-500 mx-auto mb-4 overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80"
                                 alt="Cassiopeia" class="w-full h-full object-cover">
                         </div>
-                        <h4 class="font-bold">Cassiopeia</h4>
-                        <p class="text-xs text-slate-400">Workshop Lead</p>
+                        <h4 class="font-bold text-themed">Cassiopeia</h4>
+                        <p class="text-xs text-secondary-themed">Workshop Lead</p>
                     </div>
                 </div>
             </div>

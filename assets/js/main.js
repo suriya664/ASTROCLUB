@@ -128,13 +128,13 @@ function getNavbarHTML() {
                 </button>
             </div>
             <div class="flex flex-col gap-4">
-                <a href="index.html" class="text-slate-200 hover:text-purple-400 py-2 border-b border-slate-800">Home</a>
-                <a href="index-v2.html" class="text-slate-200 hover:text-purple-400 py-2 border-b border-slate-800">Home v2</a>
-                <a href="dashboard-member.html" class="text-slate-200 hover:text-purple-400 py-2 border-b border-slate-800">Dashboard</a>
-                <a href="events.html" class="text-slate-200 hover:text-purple-400 py-2 border-b border-slate-800">Events</a>
-                <a href="observations.html" class="text-slate-200 hover:text-purple-400 py-2 border-b border-slate-800">Observations</a>
-                <a href="gallery.html" class="text-slate-200 hover:text-purple-400 py-2 border-b border-slate-800">Gallery</a>
-                <a href="resources.html" class="text-slate-200 hover:text-purple-400 py-2 border-b border-slate-800">Learn</a>
+                <a href="index.html" class="text-slate-200 hover:text-purple-400 py-2 border-b border-slate-800 ${isActive('index.html')}">Home</a>
+                <a href="index-v2.html" class="text-slate-200 hover:text-purple-400 py-2 border-b border-slate-800 ${isActive('index-v2.html')}">Home v2</a>
+                <a href="dashboard-member.html" class="text-slate-200 hover:text-purple-400 py-2 border-b border-slate-800 ${isActive('dashboard-member.html')}">Dashboard</a>
+                <a href="events.html" class="text-slate-200 hover:text-purple-400 py-2 border-b border-slate-800 ${isActive('events.html')}">Events</a>
+                <a href="observations.html" class="text-slate-200 hover:text-purple-400 py-2 border-b border-slate-800 ${isActive('observations.html')}">Observations</a>
+                <a href="gallery.html" class="text-slate-200 hover:text-purple-400 py-2 border-b border-slate-800 ${isActive('gallery.html')}">Gallery</a>
+                <a href="resources.html" class="text-slate-200 hover:text-purple-400 py-2 border-b border-slate-800 ${isActive('resources.html')}">Learn</a>
                 <div class="mt-4 pt-4 flex items-center justify-between">
                     <span class="text-sm text-slate-400">Settings</span>
                     <div class="flex gap-4">

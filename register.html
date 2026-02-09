@@ -29,17 +29,17 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="min-h-screen flex flex-col page-login">
+<body class="min-h-screen flex page-login">
 
     <!-- Left Side (Image/Branding) - Hidden on Mobile -->
-    <div class="hidden lg:flex w-5/12 relative flex-col justify-center items-center bg-slate-950 overflow-hidden">
+    <div class="hidden lg:flex lg:w-5/12 relative flex-col justify-center items-center bg-themed overflow-hidden">
         <div
             class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1543722530-d2c3201371e7?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-40">
         </div>
         <div class="absolute inset-0 bg-gradient-to-r from-card-themed/90 to-card-themed/20"></div>
 
-        <div class="relative z-10 text-left p-12">
-            <h2 class="text-4xl font-display font-bold mb-6 text-white leading-tight">Begin Your Cosmic Journey</h2>
+        <div class="relative z-10 text-left p-12 max-w-md">
+            <h2 class="text-4xl font-display font-bold mb-6 text-themed leading-tight">Begin Your Cosmic Journey</h2>
             <ul class="space-y-4 text-secondary-themed text-lg">
                 <li class="flex items-center gap-3"><i class="fas fa-check-circle text-purple-500"></i> Access to Dark
                     Sky Sites</li>
@@ -54,18 +54,18 @@
     </div>
 
     <!-- Right Side (Register Form) -->
-    <div class="w-full lg:w-7/12 flex items-center justify-center p-6 relative bg-themed overflow-y-auto">
+    <div class="w-full lg:w-7/12 flex items-center justify-center p-6 lg:p-12 relative bg-themed">
         <!-- Close Button (Mobile) -->
-        <a href="index.html" class="absolute top-6 right-6 text-slate-500 hover:text-white transition-colors">
+        <a href="index.html" class="absolute top-6 right-6 text-secondary-themed hover:text-themed transition-colors z-10">
             <i class="fas fa-times text-2xl"></i>
         </a>
 
-        <div class="w-full max-w-lg">
+        <div class="w-full max-w-lg mx-auto">
             <!-- Logo area centered -->
             <div class="text-center mb-8">
                 <a href="index.html" class="inline-flex items-center gap-3 group">
                     <i class="fas fa-meteor text-4xl text-purple-500 group-hover:rotate-12 transition-transform"></i>
-                    <span class="text-3xl font-orbitron font-bold text-white tracking-wider">ASTRO<span
+                    <span class="text-3xl font-orbitron font-bold text-themed tracking-wider">ASTRO<span
                             class="text-purple-500">CLUB</span></span>
                 </a>
             </div>
@@ -80,23 +80,23 @@
                             1</div>
                         <span class="text-xs text-purple-400 mt-2">Account</span>
                     </div>
-                    <div class="flex-1 h-0.5 bg-slate-700 mx-2"></div>
+                    <div class="flex-1 h-0.5 border-themed mx-2"></div>
                     <div class="flex flex-col items-center opacity-50">
                         <div
-                            class="w-8 h-8 rounded-full bg-slate-700 text-slate-400 flex items-center justify-center font-bold text-sm">
+                            class="w-8 h-8 rounded-full bg-card-themed text-secondary-themed flex items-center justify-center font-bold text-sm">
                             2</div>
-                        <span class="text-xs text-slate-500 mt-2">Profile</span>
+                        <span class="text-xs text-secondary-themed mt-2">Profile</span>
                     </div>
-                    <div class="flex-1 h-0.5 bg-slate-700 mx-2"></div>
+                    <div class="flex-1 h-0.5 border-themed mx-2"></div>
                     <div class="flex flex-col items-center opacity-50">
                         <div
-                            class="w-8 h-8 rounded-full bg-slate-700 text-slate-400 flex items-center justify-center font-bold text-sm">
+                            class="w-8 h-8 rounded-full bg-card-themed text-secondary-themed flex items-center justify-center font-bold text-sm">
                             3</div>
-                        <span class="text-xs text-slate-500 mt-2">Plan</span>
+                        <span class="text-xs text-secondary-themed mt-2">Plan</span>
                     </div>
                 </div>
 
-                <h3 class="text-2xl font-bold mb-6 text-center">Create Account</h3>
+                <h3 class="text-2xl font-bold mb-6 text-center text-themed">Create Account</h3>
 
                 <form class="w-full">
                     <div class="space-y-5">
@@ -106,14 +106,14 @@
                                     class="block text-xs uppercase text-secondary-themed mb-2 font-bold tracking-wider">First
                                     Name</label>
                                 <input type="text" placeholder="John"
-                                    class="w-full bg-themed border border-themed text-themed rounded-xl py-3 px-4 focus:outline-none focus:border-purple-500 transition-all placeholder:text-slate-600">
+                                    class="w-full bg-themed border border-themed text-themed rounded-xl py-3 px-4 focus:outline-none focus:border-purple-500 transition-all placeholder:text-secondary-themed">
                             </div>
                             <div>
                                 <label
                                     class="block text-xs uppercase text-secondary-themed mb-2 font-bold tracking-wider">Last
                                     Name</label>
                                 <input type="text" placeholder="Doe"
-                                    class="w-full bg-themed border border-themed text-themed rounded-xl py-3 px-4 focus:outline-none focus:border-purple-500 transition-all placeholder:text-slate-600">
+                                    class="w-full bg-themed border border-themed text-themed rounded-xl py-3 px-4 focus:outline-none focus:border-purple-500 transition-all placeholder:text-secondary-themed">
                             </div>
                         </div>
 
@@ -122,7 +122,7 @@
                                 class="block text-xs uppercase text-secondary-themed mb-2 font-bold tracking-wider">Email
                                 Address</label>
                             <input type="email" placeholder="john@example.com"
-                                class="w-full bg-themed border border-themed text-themed rounded-xl py-3 px-4 focus:outline-none focus:border-purple-500 transition-all placeholder:text-slate-600">
+                                class="w-full bg-themed border border-themed text-themed rounded-xl py-3 px-4 focus:outline-none focus:border-purple-500 transition-all placeholder:text-secondary-themed">
                         </div>
 
                         <div>
@@ -130,11 +130,11 @@
                                 class="block text-xs uppercase text-secondary-themed mb-2 font-bold tracking-wider">Choose
                                 Password</label>
                             <input type="password" placeholder="••••••••"
-                                class="w-full bg-themed border border-themed text-themed rounded-xl py-3 px-4 focus:outline-none focus:border-purple-500 transition-all placeholder:text-slate-600">
+                                class="w-full bg-themed border border-themed text-themed rounded-xl py-3 px-4 focus:outline-none focus:border-purple-500 transition-all placeholder:text-secondary-themed">
                             <div class="flex gap-1 mt-3">
                                 <div class="h-1.5 flex-1 bg-red-500/50 rounded-full"></div>
-                                <div class="h-1.5 flex-1 bg-slate-700 rounded-full"></div>
-                                <div class="h-1.5 flex-1 bg-slate-700 rounded-full"></div>
+                                <div class="h-1.5 flex-1 bg-card-themed rounded-full"></div>
+                                <div class="h-1.5 flex-1 bg-card-themed rounded-full"></div>
                             </div>
                             <span class="text-[10px] text-secondary-themed mt-2 block font-medium">Must contain 8+
                                 characters with mixed case</span>
@@ -143,7 +143,7 @@
 
 
                     <div class="mt-8 flex justify-between items-center">
-                        <a href="login.html" class="text-slate-400 hover:text-white text-sm">Cancel</a>
+                        <a href="login.html" class="text-secondary-themed hover:text-themed text-sm">Cancel</a>
                         <button type="button" class="btn-primary py-3 px-8 rounded-lg shadow-lg">
                             Next Step <i class="fas fa-arrow-right ml-2"></i>
                         </button>
@@ -151,11 +151,44 @@
                 </form>
             </div>
 
-            <div class="text-center mt-6 text-sm text-slate-500">
+            <div class="text-center mt-6 text-sm text-secondary-themed">
                 Already have an account? <a href="login.html" class="text-purple-400 hover:text-purple-300">Log In</a>
             </div>
         </div>
+
+        <!-- Theme Toggle -->
+        <div class="mt-6 text-center">
+            <button id="theme-toggle" class="p-2 rounded-lg bg-card-themed border border-themed text-secondary-themed hover:text-white transition-all shadow-lg" title="Toggle Universe Mode">
+                <i class="fas fa-adjust dark:hidden"></i>
+                <i class="fas fa-sun hidden dark:block"></i>
+            </button>
+        </div>
     </div>
+
+    <!-- Register Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Initialize theme
+        document.addEventListener('DOMContentLoaded', () => {
+            // Theme initialization (from main.js)
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            document.documentElement.classList.add('dark');
+            
+            // Theme toggle functionality
+            const themeToggle = document.getElementById('theme-toggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => {
+                    const currentTheme = document.documentElement.getAttribute('data-theme');
+                    const newTheme = currentTheme === 'dark' ? 'red' : 'dark';
+                    
+                    document.documentElement.setAttribute('data-theme', newTheme);
+                    localStorage.setItem('theme', newTheme);
+                    document.documentElement.classList.add('dark');
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
