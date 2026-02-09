@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="min-h-screen flex text-sm md:text-base page-dashboard">
+<body class="min-h-screen flex text-sm md:text-base page-dashboard overflow-x-hidden">
 
     <!-- Sidebar Navigation (Desktop) / Mobile Drawer -->
     <aside id="sidebar"
@@ -121,7 +121,8 @@
             <div class="flex items-center gap-4">
                 <div class="flex items-center gap-3">
                     <i class="fas fa-meteor text-purple-500"></i>
-                    <span class="font-orbitron font-bold text-themed hidden sm:block">ASTRO<span class="text-purple-500">CLUB</span></span>
+                    <span class="font-orbitron font-bold text-themed hidden sm:block">ASTRO<span
+                            class="text-purple-500">CLUB</span></span>
                 </div>
                 <h1 class="text-xl font-display font-semibold hidden md:block text-themed">Dashboard</h1>
             </div>
@@ -140,7 +141,9 @@
                 </button>
 
                 <!-- Theme Toggle -->
-                <button id="theme-toggle" class="p-2 rounded-lg bg-card-themed border border-themed text-secondary-themed hover:text-white transition-all shadow-lg" title="Toggle Universe Mode">
+                <button id="theme-toggle"
+                    class="p-2 rounded-lg bg-card-themed border border-themed text-secondary-themed hover:text-white transition-all shadow-lg"
+                    title="Toggle Universe Mode">
                     <i class="fas fa-adjust dark:hidden"></i>
                     <i class="fas fa-sun hidden dark:block"></i>
                 </button>
@@ -429,14 +432,14 @@
             const savedTheme = localStorage.getItem('theme') || 'dark';
             document.documentElement.setAttribute('data-theme', savedTheme);
             document.documentElement.classList.add('dark');
-            
+
             // Theme toggle functionality
             const themeToggle = document.getElementById('theme-toggle');
             if (themeToggle) {
                 themeToggle.addEventListener('click', () => {
                     const currentTheme = document.documentElement.getAttribute('data-theme');
                     const newTheme = currentTheme === 'dark' ? 'red' : 'dark';
-                    
+
                     document.documentElement.setAttribute('data-theme', newTheme);
                     localStorage.setItem('theme', newTheme);
                     document.documentElement.classList.add('dark');

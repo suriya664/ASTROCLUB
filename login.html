@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="h-screen overflow-hidden flex page-login">
+<body class="min-h-screen overflow-auto flex page-login">
 
     <!-- Left Side (Image/Branding) - Hidden on Mobile -->
     <div class="hidden lg:flex w-1/2 relative flex-col justify-center items-center bg-themed overflow-hidden">
@@ -78,7 +78,8 @@
                 </div>
 
                 <h3 class="text-2xl font-bold mb-1 text-center text-themed">Member Login</h3>
-                <p class="text-secondary-themed text-sm mb-8 text-center">Enter your coordinates to access the portal</p>
+                <p class="text-secondary-themed text-sm mb-8 text-center">Enter your coordinates to access the portal
+                </p>
 
                 <form>
                     <div class="space-y-5">
@@ -116,23 +117,6 @@
                     </button>
                 </form>
 
-                <div class="my-8 flex items-center gap-4">
-                    <div class="h-px border-themed flex-1"></div>
-                    <span class="text-secondary-themed text-xs uppercase tracking-wider">Or continue with</span>
-                    <div class="h-px border-themed flex-1"></div>
-                </div>
-
-                <div class="grid grid-cols-2 gap-4">
-                    <button
-                        class="bg-card-themed border border-themed hover:bg-themed text-themed py-2 rounded-lg flex items-center justify-center gap-2 transition-all">
-                        <i class="fab fa-google text-red-500"></i> Google
-                    </button>
-                    <button
-                        class="bg-card-themed border border-themed hover:bg-themed text-themed py-2 rounded-lg flex items-center justify-center gap-2 transition-all">
-                        <i class="fab fa-facebook text-blue-500"></i> Facebook
-                    </button>
-                </div>
-
                 <div class="text-center mt-6 text-sm text-secondary-themed">
                     Not a member yet? <a href="register.html"
                         class="text-purple-400 hover:text-purple-300 font-semibold transition-colors">Join the Club</a>
@@ -141,7 +125,9 @@
 
             <!-- Theme Toggle -->
             <div class="mt-6 text-center">
-                <button id="theme-toggle" class="p-2 rounded-lg bg-card-themed border border-themed text-secondary-themed hover:text-white transition-all shadow-lg" title="Toggle Universe Mode">
+                <button id="theme-toggle"
+                    class="p-2 rounded-lg bg-card-themed border border-themed text-secondary-themed hover:text-white transition-all shadow-lg"
+                    title="Toggle Universe Mode">
                     <i class="fas fa-adjust dark:hidden"></i>
                     <i class="fas fa-sun hidden dark:block"></i>
                 </button>
@@ -155,78 +141,101 @@
                 <span>&bull;</span>
                 <a href="#" class="hover:text-themed">Help Center</a>
             </div>
+
+            <!-- Social Media Icons -->
+            <div class="mt-6 flex justify-center gap-4">
+                <a href="#"
+                    class="w-10 h-10 rounded-full bg-card-themed border border-themed flex items-center justify-center text-secondary-themed hover:text-pink-500 hover:border-pink-500 transition-all"
+                    title="Follow us on Instagram">
+                    <i class="fab fa-instagram text-lg"></i>
+                </a>
+                <a href="#"
+                    class="w-10 h-10 rounded-full bg-card-themed border border-themed flex items-center justify-center text-secondary-themed hover:text-blue-400 hover:border-blue-400 transition-all"
+                    title="Follow us on Twitter">
+                    <i class="fab fa-twitter text-lg"></i>
+                </a>
+                <a href="#"
+                    class="w-10 h-10 rounded-full bg-card-themed border border-themed flex items-center justify-center text-secondary-themed hover:text-indigo-500 hover:border-indigo-500 transition-all"
+                    title="Join our Discord">
+                    <i class="fab fa-discord text-lg"></i>
+                </a>
+                <a href="#"
+                    class="w-10 h-10 rounded-full bg-card-themed border border-themed flex items-center justify-center text-secondary-themed hover:text-red-500 hover:border-red-500 transition-all"
+                    title="Subscribe on YouTube">
+                    <i class="fab fa-youtube text-lg"></i>
+                </a>
+            </div>
         </div>
-    </div>
 
-    <!-- Login Scripts -->
-    <script src="assets/js/main.js"></script>
-    <script>
-        // Initialize theme
-        document.addEventListener('DOMContentLoaded', () => {
-            // Theme initialization (from main.js)
-            const savedTheme = localStorage.getItem('theme') || 'dark';
-            document.documentElement.setAttribute('data-theme', savedTheme);
-            document.documentElement.classList.add('dark');
-            
-            // Theme toggle functionality
-            const themeToggle = document.getElementById('theme-toggle');
-            if (themeToggle) {
-                themeToggle.addEventListener('click', () => {
-                    const currentTheme = document.documentElement.getAttribute('data-theme');
-                    const newTheme = currentTheme === 'dark' ? 'red' : 'dark';
-                    
-                    document.documentElement.setAttribute('data-theme', newTheme);
-                    localStorage.setItem('theme', newTheme);
-                    document.documentElement.classList.remove('dark');
-                    document.documentElement.classList.add(newTheme);
-                });
-            }
-        });
-    </script>
-    <script>
-        const canvas = document.getElementById('login-starfield');
-        if (canvas) {
-            const ctx = canvas.getContext('2d');
-            let stars = [];
+        <!-- Login Scripts -->
+        <script src="assets/js/main.js"></script>
+        <script>
+            // Initialize theme
+            document.addEventListener('DOMContentLoaded', () => {
+                // Theme initialization (from main.js)
+                const savedTheme = localStorage.getItem('theme') || 'dark';
+                document.documentElement.setAttribute('data-theme', savedTheme);
+                document.documentElement.classList.add('dark');
 
-            function resize() {
-                canvas.width = canvas.parentElement.offsetWidth;
-                canvas.height = canvas.parentElement.offsetHeight;
-                init();
-            }
+                // Theme toggle functionality
+                const themeToggle = document.getElementById('theme-toggle');
+                if (themeToggle) {
+                    themeToggle.addEventListener('click', () => {
+                        const currentTheme = document.documentElement.getAttribute('data-theme');
+                        const newTheme = currentTheme === 'dark' ? 'red' : 'dark';
 
-            function init() {
-                stars = [];
-                const count = 100;
-                for (let i = 0; i < count; i++) {
-                    stars.push({
-                        x: Math.random() * canvas.width,
-                        y: Math.random() * canvas.height,
-                        s: Math.random() * 1.5,
-                        o: Math.random()
+                        document.documentElement.setAttribute('data-theme', newTheme);
+                        localStorage.setItem('theme', newTheme);
+                        document.documentElement.classList.remove('dark');
+                        document.documentElement.classList.add(newTheme);
                     });
                 }
-            }
+            });
+        </script>
+        <script>
+            const canvas = document.getElementById('login-starfield');
+            if (canvas) {
+                const ctx = canvas.getContext('2d');
+                let stars = [];
 
-            function draw() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                ctx.fillStyle = '#fff';
-                stars.forEach(st => {
-                    ctx.globalAlpha = st.o;
-                    ctx.beginPath();
-                    ctx.arc(st.x, st.y, st.s, 0, Math.PI * 2);
-                    ctx.fill();
-                    st.o += (Math.random() - 0.5) * 0.03;
-                    if (st.o < 0) st.o = 0; if (st.o > 1) st.o = 1;
-                });
-                requestAnimationFrame(draw);
-            }
+                function resize() {
+                    canvas.width = canvas.parentElement.offsetWidth;
+                    canvas.height = canvas.parentElement.offsetHeight;
+                    init();
+                }
 
-            window.addEventListener('resize', resize);
-            resize();
-            draw();
-        }
-    </script>
+                function init() {
+                    stars = [];
+                    const count = 100;
+                    for (let i = 0; i < count; i++) {
+                        stars.push({
+                            x: Math.random() * canvas.width,
+                            y: Math.random() * canvas.height,
+                            s: Math.random() * 1.5,
+                            o: Math.random()
+                        });
+                    }
+                }
+
+                function draw() {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    ctx.fillStyle = '#fff';
+                    stars.forEach(st => {
+                        ctx.globalAlpha = st.o;
+                        ctx.beginPath();
+                        ctx.arc(st.x, st.y, st.s, 0, Math.PI * 2);
+                        ctx.fill();
+                        st.o += (Math.random() - 0.5) * 0.03;
+                        if (st.o < 0) st.o = 0; if (st.o > 1) st.o = 1;
+                    });
+                    requestAnimationFrame(draw);
+                }
+
+                window.addEventListener('resize', resize);
+                resize();
+                draw();
+            }
+        </script>
 </body>
 
 </html>

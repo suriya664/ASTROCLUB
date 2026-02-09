@@ -56,7 +56,8 @@
     <!-- Right Side (Register Form) -->
     <div class="w-full lg:w-7/12 flex items-center justify-center p-6 lg:p-12 relative bg-themed">
         <!-- Close Button (Mobile) -->
-        <a href="index.html" class="absolute top-6 right-6 text-secondary-themed hover:text-themed transition-colors z-10">
+        <a href="index.html"
+            class="absolute top-6 right-6 text-secondary-themed hover:text-themed transition-colors z-10">
             <i class="fas fa-times text-2xl"></i>
         </a>
 
@@ -154,11 +155,37 @@
             <div class="text-center mt-6 text-sm text-secondary-themed">
                 Already have an account? <a href="login.html" class="text-purple-400 hover:text-purple-300">Log In</a>
             </div>
+
+            <!-- Social Media Icons -->
+            <div class="mt-6 flex justify-center gap-4">
+                <a href="#"
+                    class="w-10 h-10 rounded-full bg-card-themed border border-themed flex items-center justify-center text-secondary-themed hover:text-pink-500 hover:border-pink-500 transition-all"
+                    title="Follow us on Instagram">
+                    <i class="fab fa-instagram text-lg"></i>
+                </a>
+                <a href="#"
+                    class="w-10 h-10 rounded-full bg-card-themed border border-themed flex items-center justify-center text-secondary-themed hover:text-blue-400 hover:border-blue-400 transition-all"
+                    title="Follow us on Twitter">
+                    <i class="fab fa-twitter text-lg"></i>
+                </a>
+                <a href="#"
+                    class="w-10 h-10 rounded-full bg-card-themed border border-themed flex items-center justify-center text-secondary-themed hover:text-indigo-500 hover:border-indigo-500 transition-all"
+                    title="Join our Discord">
+                    <i class="fab fa-discord text-lg"></i>
+                </a>
+                <a href="#"
+                    class="w-10 h-10 rounded-full bg-card-themed border border-themed flex items-center justify-center text-secondary-themed hover:text-red-500 hover:border-red-500 transition-all"
+                    title="Subscribe on YouTube">
+                    <i class="fab fa-youtube text-lg"></i>
+                </a>
+            </div>
         </div>
 
         <!-- Theme Toggle -->
         <div class="mt-6 text-center">
-            <button id="theme-toggle" class="p-2 rounded-lg bg-card-themed border border-themed text-secondary-themed hover:text-white transition-all shadow-lg" title="Toggle Universe Mode">
+            <button id="theme-toggle"
+                class="p-2 rounded-lg bg-card-themed border border-themed text-secondary-themed hover:text-white transition-all shadow-lg"
+                title="Toggle Universe Mode">
                 <i class="fas fa-adjust dark:hidden"></i>
                 <i class="fas fa-sun hidden dark:block"></i>
             </button>
@@ -174,14 +201,14 @@
             const savedTheme = localStorage.getItem('theme') || 'dark';
             document.documentElement.setAttribute('data-theme', savedTheme);
             document.documentElement.classList.add('dark');
-            
+
             // Theme toggle functionality
             const themeToggle = document.getElementById('theme-toggle');
             if (themeToggle) {
                 themeToggle.addEventListener('click', () => {
                     const currentTheme = document.documentElement.getAttribute('data-theme');
                     const newTheme = currentTheme === 'dark' ? 'red' : 'dark';
-                    
+
                     document.documentElement.setAttribute('data-theme', newTheme);
                     localStorage.setItem('theme', newTheme);
                     document.documentElement.classList.add('dark');
