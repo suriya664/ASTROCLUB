@@ -77,7 +77,7 @@
             </a>
             <a href="#"
                 class="flex items-center gap-3 px-3 py-3 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors">
-                <i class="fas fa-heart w-5 text-center"></i> <span>Favorites</span>
+                <i class="fas fa-bookmark w-5 text-center"></i> <span>Favorites</span>
             </a>
             <a href="#"
                 class="flex items-center gap-3 px-3 py-3 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors">
@@ -101,7 +101,7 @@
         <div class="p-4 border-t border-slate-800">
             <div class="bg-slate-800 rounded-xl p-3 flex items-center justify-between">
                 <div class="flex items-center gap-2">
-                    <i class="fas fa-moon text-yellow-300"></i>
+                    <i class="fas fa-cloud text-yellow-300"></i>
                     <span class="text-xs text-slate-300">Conditions</span>
                 </div>
                 <span class="text-xs font-bold text-green-400">Excellent</span>
@@ -119,10 +119,11 @@
         <header
             class="h-20 bg-slate-900 border-b border-slate-800 flex items-center justify-between px-6 sticky top-0 z-30 opacity-95 backdrop-blur">
             <div class="flex items-center gap-4">
-                <button id="sidebar-toggle" class="lg:hidden text-slate-400 hover:text-white">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-                <h1 class="text-xl font-display font-semibold hidden md:block">Dashboard</h1>
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-meteor text-purple-500"></i>
+                    <span class="font-orbitron font-bold text-themed hidden sm:block">ASTRO<span class="text-purple-500">CLUB</span></span>
+                </div>
+                <h1 class="text-xl font-display font-semibold hidden md:block text-themed">Dashboard</h1>
             </div>
 
             <div class="flex items-center gap-6">
@@ -138,16 +139,9 @@
                     <i class="fas fa-filter"></i>
                 </button>
 
-                <!-- Favorites -->
-                <button class="relative text-slate-400 hover:text-white" title="Favorites">
-                    <i class="fas fa-heart"></i>
-                </button>
-
                 <!-- Theme Toggle -->
-                <button id="theme-toggle"
-                    class="p-2 rounded-lg bg-card-themed border border-themed text-secondary-themed hover:text-white transition-all shadow-lg"
-                    title="Toggle Universe Mode">
-                    <i class="fas fa-moon dark:hidden"></i>
+                <button id="theme-toggle" class="p-2 rounded-lg bg-card-themed border border-themed text-secondary-themed hover:text-white transition-all shadow-lg" title="Toggle Universe Mode">
+                    <i class="fas fa-adjust dark:hidden"></i>
                     <i class="fas fa-sun hidden dark:block"></i>
                 </button>
 
@@ -157,6 +151,10 @@
                     <span class="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full"></span>
                 </button>
 
+                <!-- Hamburger Menu (Moved to right) -->
+                <button id="sidebar-toggle" class="lg:hidden text-slate-400 hover:text-white">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
 
                 <!-- User Dropdown (Simplified) -->
                 <a href="profile.html"
@@ -279,7 +277,7 @@
                     <div class="grid grid-cols-4 md:grid-cols-7 gap-4">
                         <div class="flex flex-col items-center p-2 rounded-lg bg-slate-900 border border-slate-700">
                             <span class="text-[10px] text-slate-500 uppercase">Mon</span>
-                            <i class="fas fa-moon text-yellow-200 my-2"></i>
+                            <i class="fas fa-star text-yellow-200 my-2"></i>
                             <span class="text-xs font-bold text-green-400">Clear</span>
                         </div>
                         <div class="flex flex-col items-center p-2 rounded-lg bg-slate-900 border border-slate-700">
@@ -402,6 +400,7 @@
     </main>
 
     <!-- Dashboard Scripts -->
+    <script src="assets/js/main.js"></script>
     <script>
         // Sidebar Toggle for Mobile
         const sidebar = document.getElementById('sidebar');
@@ -423,6 +422,27 @@
             sidebarToggle.addEventListener('click', toggleSidebar);
             overlay.addEventListener('click', toggleSidebar);
         }
+
+        // Initialize theme
+        document.addEventListener('DOMContentLoaded', () => {
+            // Theme initialization (from main.js)
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            document.documentElement.classList.add('dark');
+            
+            // Theme toggle functionality
+            const themeToggle = document.getElementById('theme-toggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => {
+                    const currentTheme = document.documentElement.getAttribute('data-theme');
+                    const newTheme = currentTheme === 'dark' ? 'red' : 'dark';
+                    
+                    document.documentElement.setAttribute('data-theme', newTheme);
+                    localStorage.setItem('theme', newTheme);
+                    document.documentElement.classList.add('dark');
+                });
+            }
+        });
 
         // Initialize Charts if Chart.js is loaded
         document.addEventListener('DOMContentLoaded', () => {
