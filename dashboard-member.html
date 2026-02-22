@@ -121,7 +121,7 @@
             <div class="flex items-center gap-4">
                 <div class="flex items-center gap-3">
                     <i class="fas fa-meteor text-purple-500"></i>
-                    <span class="font-orbitron font-bold text-themed hidden sm:block">ASTRO<span
+                    <span class="font-orbitron font-bold text-themed">ASTRO<span
                             class="text-purple-500">CLUB</span></span>
                 </div>
                 <h1 class="text-xl font-display font-semibold hidden md:block text-themed">Dashboard</h1>
@@ -168,10 +168,11 @@
         </header>
 
         <!-- Dashboard Content -->
-        <div class="p-6 md:p-8 space-y-8">
+        <div class="px-5 py-6 md:p-8 space-y-8 overflow-x-hidden h-auto">
 
             <!-- Welcome Section -->
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+            <div
+                class="flex flex-col md:flex-row justify-between items-center text-center md:items-end md:text-left gap-4">
                 <div>
                     <h2 class="text-2xl font-bold mb-1">Clear skies tonight, John! 🔭</h2>
                     <p class="text-slate-400 text-sm">Here's what's happening in your universe.</p>
@@ -191,7 +192,7 @@
                     <div
                         class="absolute right-0 top-0 w-24 h-24 bg-purple-500/10 rounded-full -mr-6 -mt-6 group-hover:bg-purple-500/20 transition-colors">
                     </div>
-                    <div class="relative z-10">
+                    <div class="relative z-10 flex flex-col items-center text-center lg:items-start lg:text-left">
                         <div class="text-secondary-themed text-xs uppercase tracking-wider font-bold mb-1">Total
                             Observations
                         </div>
@@ -208,7 +209,7 @@
                     <div
                         class="absolute right-0 top-0 w-24 h-24 bg-blue-500/10 rounded-full -mr-6 -mt-6 group-hover:bg-blue-500/20 transition-colors">
                     </div>
-                    <div class="relative z-10">
+                    <div class="relative z-10 flex flex-col items-center text-center lg:items-start lg:text-left">
                         <div class="text-secondary-themed text-xs uppercase tracking-wider font-bold mb-1">Upcoming
                             Events
                         </div>
@@ -222,7 +223,7 @@
                     <div
                         class="absolute right-0 top-0 w-24 h-24 bg-orange-500/10 rounded-full -mr-6 -mt-6 group-hover:bg-orange-500/20 transition-colors">
                     </div>
-                    <div class="relative z-10">
+                    <div class="relative z-10 flex flex-col items-center text-center lg:items-start lg:text-left">
                         <div class="text-secondary-themed text-xs uppercase tracking-wider font-bold mb-1">Current
                             Streak</div>
                         <div class="text-3xl font-bold text-themed">7 <span
@@ -236,7 +237,7 @@
                     <div
                         class="absolute right-0 top-0 w-24 h-24 bg-green-500/10 rounded-full -mr-6 -mt-6 group-hover:bg-green-500/20 transition-colors">
                     </div>
-                    <div class="relative z-10">
+                    <div class="relative z-10 flex flex-col items-center text-center lg:items-start lg:text-left">
                         <div class="text-secondary-themed text-xs uppercase tracking-wider font-bold mb-1">Photos Shared
                         </div>
                         <div class="text-3xl font-bold text-themed">23</div>

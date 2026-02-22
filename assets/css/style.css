@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700&display=swap');
 
+/* Global reset for box-sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 /* Tailwind Base (loaded via CDN, but here for reference/customization) */
 
 :root {
@@ -206,7 +213,9 @@ h6 {
     font-size: 1.75rem;
 }
 
-.brand-logo span {
-    font-size: 1.5rem;
-    line-height: 1;
+
+.page-login input,
+.page-register input {
+    background-color: black !important;
+    color: white !important;
 }
