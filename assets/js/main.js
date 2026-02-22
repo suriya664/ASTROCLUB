@@ -153,8 +153,7 @@ function getNavbarHTML() {
         </div>
     </div>
     <!-- Overlay -->
-    <div id="menu-overlay" class="fixed inset-0 top-[64px] lg:top-[80px] bg-black/60 hidden lg:hidden backdrop-blur-sm z-[24000]"></div>
-    <div class="h-[64px] lg:h-[80px]"></div> <!-- Spacer to prevent overlap -->
+    <div id="menu-overlay" class="fixed inset-0 bg-black/60 hidden backdrop-blur-sm z-[24000]"></div>
     `;
 }
 
