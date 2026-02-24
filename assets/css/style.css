@@ -37,6 +37,7 @@
 html,
 body {
     overflow-x: hidden;
+    overflow-y: auto;
     width: 100%;
 }
 
@@ -122,6 +123,17 @@ h6 {
 }
 
 /* Enforce fixed positioning and max z-index for mobile menu */
+@media (max-width: 768px) {
+
+    body {
+        overflow-y: auto;
+    }
+
+    .dashboard-content {
+        padding: 15px;
+    }
+
+}
 #mobile-menu {
     position: fixed !important;
     left: 0;
