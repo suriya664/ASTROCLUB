@@ -50,7 +50,8 @@
     <main class="flex-grow pt-[var(--nav-height-mobile)] lg:pt-[var(--nav-height-desktop)]">
 
         <!-- Hero Section -->
-        <section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+        <section
+            class="relative min-h-[calc(100vh-64px)] py-12 lg:py-0 flex items-center justify-center overflow-visible">
             <!-- Background Image with Overlay -->
             <div
                 class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-30">
@@ -84,22 +85,22 @@
 
                 <!-- Live Sky Info Bar -->
                 <div
-                    class="mt-16 inline-flex flex-wrap justify-center gap-6 bg-slate-900/60 backdrop-blur-md border border-slate-700/50 rounded-2xl p-4 shadow-xl">
-                    <div class="flex items-center gap-3 px-4 border-r border-slate-700/50 last:border-0">
+                    class="mt-16 inline-flex flex-col sm:flex-row flex-wrap justify-center gap-6 bg-slate-900/60 backdrop-blur-md border border-slate-700/50 rounded-2xl p-6 sm:p-4 shadow-xl">
+                    <div class="flex items-center gap-3 px-4 sm:border-r border-slate-700/50 last:border-0">
                         <i class="fas fa-moon text-yellow-100 text-2xl"></i>
                         <div class="text-left">
                             <div class="text-xs text-slate-400 uppercase tracking-wide">Moon Phase</div>
                             <div class="text-sm font-semibold text-white">Waxing Gibbous (72%)</div>
                         </div>
                     </div>
-                    <div class="flex items-center gap-3 px-4 border-r border-slate-700/50 last:border-0">
+                    <div class="flex items-center gap-3 px-4 sm:border-r border-slate-700/50 last:border-0">
                         <i class="fas fa-meteor text-purple-400 text-2xl"></i>
                         <div class="text-left">
                             <div class="text-xs text-slate-400 uppercase tracking-wide">Next Event</div>
                             <div class="text-sm font-semibold text-white">Perseid Shower (Aug 12)</div>
                         </div>
                     </div>
-                    <div class="flex items-center gap-3 px-4 border-r border-slate-700/50 last:border-0">
+                    <div class="flex items-center gap-3 px-4 last:border-0">
                         <i class="fas fa-satellite text-blue-400 text-2xl"></i>
                         <div class="text-left">
                             <div class="text-xs text-slate-400 uppercase tracking-wide">ISS Overhead</div>
@@ -341,7 +342,8 @@
                 <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
                     <input type="email" placeholder="Enter your email"
                         class="flex-grow bg-slate-800 border border-slate-700 text-white px-6 py-4 rounded-xl focus:outline-none focus:border-purple-500 transition-colors">
-                    <button class="btn-primary px-8 py-4 rounded-xl font-bold whitespace-nowrap">Get Started</button>
+                    <button type="submit" class="btn-primary px-8 py-4 rounded-xl font-bold whitespace-nowrap">Get
+                        Started</button>
                 </form>
                 <p class="mt-4 text-xs text-slate-500">No spam, just stars. Unsubscribe anytime.</p>
             </div>
